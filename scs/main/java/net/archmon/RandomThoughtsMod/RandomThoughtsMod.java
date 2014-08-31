@@ -5,6 +5,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.archmon.RandomThoughtsMod.configuration.ConfigurationHandler;
 import net.archmon.RandomThoughtsMod.proxy.IProxy;
 import net.archmon.RandomThoughtsMod.reference.Reference;
 
@@ -22,7 +23,7 @@ public class RandomThoughtsMod
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)//preInit could be anything, but inside () is important.
     {
-
+        ConfigurationHandler.init(event.getSuggestedConfigurationFile());
     }
 
     @Mod.EventHandler
