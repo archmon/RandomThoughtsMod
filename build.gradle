@@ -17,13 +17,18 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.7.2-B0.1"
+version = "1.7.10-B0.2"
+//don't forget to update main/java/reference/reference class
 group= "net.archmon.RandomThoughtsMod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "RandomThoughtsMod"
 
 minecraft {
-    version = "1.7.2-10.12.2.1121"
+    version = "1.7.10-10.13.0.1160"
     assetDir = "eclipse/assets"
+    //update forge, use terminal and input commands below
+    //gradlew clean
+    //gradlew setupdecompworkspace
+    //gradlew idea
 }
 
 dependencies {
