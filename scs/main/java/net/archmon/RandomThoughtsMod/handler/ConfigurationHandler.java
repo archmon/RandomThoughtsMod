@@ -18,6 +18,7 @@ public class ConfigurationHandler
         if (configuration == null)
         {
             configuration = new Configuration(configFile);
+            loadConfigurations();
         }
     }
 
@@ -31,7 +32,8 @@ public class ConfigurationHandler
         }
     }
 
-    public void loadConfigurations()
+    //private static will be only callable within this class.
+    private static void loadConfigurations()
     {
         testValue = configuration.getBoolean("configValue", Configuration.CATEGORY_GENERAL, false, "This is an example configuration value");
 //        //CATEGORY_GENERAL=

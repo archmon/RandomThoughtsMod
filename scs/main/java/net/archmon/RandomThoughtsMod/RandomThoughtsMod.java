@@ -1,5 +1,6 @@
 package net.archmon.RandomThoughtsMod;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -10,9 +11,8 @@ import net.archmon.RandomThoughtsMod.proxy.IProxy;
 import net.archmon.RandomThoughtsMod.reference.Reference;
 import net.archmon.RandomThoughtsMod.utility.LogHelper;
 
-
-@Mod(modid= Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
 //control-b for go to scs code
+@Mod(modid= Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
 public class RandomThoughtsMod
 {
     @Mod.Instance(Reference.MOD_ID)
@@ -28,6 +28,8 @@ public class RandomThoughtsMod
         //puts time, client thread/info, modID, message.
         //Also, info can be replaced with teh different levels from log helper class
         //debug does not show in log, same with trace. Default set to log fatal, error, warn, off, and info.
+        FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+        //register takes the @Subscribe events in it
         LogHelper.info("Pre Initialization Complete!");
     }
 
