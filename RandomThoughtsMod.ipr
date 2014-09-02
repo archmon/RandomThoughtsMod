@@ -182,6 +182,13 @@
       </item>
     </group>
   </component>
+  <component name="ProjectDictionaryState">
+    <dictionary name="Jason Archer">
+      <words>
+        <w>pahimar</w>
+      </words>
+    </dictionary>
+  </component>
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/RandomThoughtsMod.iml" filepath="$PROJECT_DIR$/RandomThoughtsMod.iml" />

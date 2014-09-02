@@ -7,6 +7,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.archmon.RandomThoughtsMod.handler.ConfigurationHandler;
+import net.archmon.RandomThoughtsMod.init.ModItems;
 import net.archmon.RandomThoughtsMod.proxy.IProxy;
 import net.archmon.RandomThoughtsMod.reference.Reference;
 import net.archmon.RandomThoughtsMod.utility.LogHelper;
@@ -30,6 +31,9 @@ public class RandomThoughtsMod
         //debug does not show in log, same with trace. Default set to log fatal, error, warn, off, and info.
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
         //register takes the @Subscribe events in it
+
+        ModItems.init();//registered mod items.
+        //stoped at time index 11:24 of Ep8 Lets Mod Reboot.
         LogHelper.info("Pre Initialization Complete!");
     }
 
