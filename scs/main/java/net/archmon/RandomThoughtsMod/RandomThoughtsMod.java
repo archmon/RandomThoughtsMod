@@ -33,7 +33,7 @@ public class RandomThoughtsMod
         //register takes the @Subscribe events in it
 
         ModItems.init();//registered mod items.
-        //stoped at time index 11:24 of Ep8 Lets Mod Reboot.
+
         LogHelper.info("Pre Initialization Complete!");
     }
 
