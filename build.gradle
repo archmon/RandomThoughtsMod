@@ -23,7 +23,7 @@ group= "net.archmon.RandomThoughtsMod" // http://maven.apache.org/guides/mini/gu
 archivesBaseName = "RandomThoughtsMod"
 
 minecraft {
-    version = "1.7.10-10.13.0.1160"
+    version = "1.7.10-10.13.0.1170"
     assetDir = "eclipse/assets"
     //update forge, use terminal and input commands below
     //gradlew clean

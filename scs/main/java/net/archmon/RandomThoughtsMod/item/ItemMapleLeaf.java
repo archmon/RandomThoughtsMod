@@ -9,6 +9,8 @@ public class ItemMapleLeaf extends Item_RTM
         //note, no name/texture/does nothing
         this.setUnlocalizedName("mapleLeaf");  //makes it show on item randomthoughtsmod.mapleLeaf
         //don't forget to go to en_US.lang and ModItems.java
+        //this.maxStackSize = 1;
+        //makes it to where each item is a full stack.
     }
 
 
