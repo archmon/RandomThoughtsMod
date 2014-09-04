@@ -2,6 +2,7 @@ package net.archmon.RandomThoughtsMod.block;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.archmon.RandomThoughtsMod.creativetab.CreativeTab_RTM;
 import net.archmon.RandomThoughtsMod.reference.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -14,6 +15,7 @@ public class Block_RTM extends Block
     public Block_RTM(Material material)
     {
         super(material);
+        this.setCreativeTab(CreativeTab_RTM.RTM_TAB);
     }
 
     //This is also a constructor that takes no perimeters.

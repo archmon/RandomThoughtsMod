@@ -1,33 +1,33 @@
-[18:50:28] [main/INFO]: No arguments specified, assuming client.
-[18:50:28] [main/INFO]: Extra: []
-[18:50:29] [main/INFO]: Running with arguments: [--userProperties, {}, --username, ForgeDevName, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --assetsDir, C:/Users/Jason Archer/.gradle/caches/minecraft/assets, --version, 1.7.10]
-[18:50:29] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
-[18:50:29] [main/INFO]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
-[18:50:29] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
-[18:50:29] [main/INFO]: Forge Mod Loader version 7.10.11.1170 for Minecraft 1.7.10 loading
-[18:50:29] [main/INFO]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.7.0_67, running on Windows 7:amd64:6.1, installed at C:\Program Files\Java\jdk1.7.0_67\jre
-[18:50:29] [main/INFO]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
-[18:50:29] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
-[18:50:29] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.FMLDeobfTweaker
-[18:50:29] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
-[18:50:29] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
-[18:50:29] [main/INFO]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
-[18:50:30] [main/ERROR]: The binary patch set is missing. Either you are in a development environment, or things are not going to work!
-[18:50:36] [main/ERROR]: The minecraft jar file:/C:/Users/Jason%20Archer/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.0.1170/forgeSrc-1.7.10-10.13.0.1170.jar!/net/minecraft/client/ClientBrandRetriever.class appears to be corrupt! There has been CRITICAL TAMPERING WITH MINECRAFT, it is highly unlikely minecraft will work! STOP NOW, get a clean copy and try again!
-[18:50:36] [main/ERROR]: FML has been ordered to ignore the invalid or missing minecraft certificate. This is very likely to cause a problem!
-[18:50:36] [main/ERROR]: Technical information: ClientBrandRetriever was at jar:file:/C:/Users/Jason%20Archer/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.0.1170/forgeSrc-1.7.10-10.13.0.1170.jar!/net/minecraft/client/ClientBrandRetriever.class, there were 0 certificates for it
-[18:50:36] [main/ERROR]: FML appears to be missing any signature data. This is not a good thing
-[18:50:36] [main/INFO]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
-[18:50:36] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLDeobfTweaker
-[18:50:38] [main/INFO]: Launching wrapped minecraft {net.minecraft.client.main.Main}
-[18:50:43] [main/INFO]: Setting user: ForgeDevName
-[18:50:46] [Client thread/INFO]: LWJGL Version: 2.9.1
-[18:50:47] [Client thread/INFO]: Attempting early MinecraftForge initialization
-[18:50:47] [Client thread/INFO]: MinecraftForge v10.13.0.1170 Initialized
-[18:50:48] [Client thread/INFO]: Replaced 182 ore recipies
-[18:50:48] [Client thread/INFO]: Completed early MinecraftForge initialization
-[18:50:48] [Client thread/INFO]: Searching C:\minecraft code projects\Minecraft\1.7\RandomThoughtsMod\eclipse\mods for mods
-[18:50:55] [Client thread/WARN]: Zip file rt.jar failed to read properly, it will be ignored
+[18:08:59] [main/INFO]: No arguments specified, assuming client.
+[18:08:59] [main/INFO]: Extra: []
+[18:08:59] [main/INFO]: Running with arguments: [--userProperties, {}, --username, ForgeDevName, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --assetsDir, C:/Users/Jason Archer/.gradle/caches/minecraft/assets, --version, 1.7.10]
+[18:09:00] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[18:09:00] [main/INFO]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[18:09:00] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[18:09:00] [main/INFO]: Forge Mod Loader version 7.10.11.1179 for Minecraft 1.7.10 loading
+[18:09:00] [main/INFO]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.7.0_67, running on Windows 7:amd64:6.1, installed at C:\Program Files\Java\jdk1.7.0_67\jre
+[18:09:00] [main/INFO]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[18:09:00] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
+[18:09:00] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.FMLDeobfTweaker
+[18:09:00] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
+[18:09:00] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
+[18:09:00] [main/INFO]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
+[18:09:01] [main/ERROR]: The binary patch set is missing. Either you are in a development environment, or things are not going to work!
+[18:09:06] [main/ERROR]: The minecraft jar file:/C:/Users/Jason%20Archer/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.0.1179/forgeSrc-1.7.10-10.13.0.1179.jar!/net/minecraft/client/ClientBrandRetriever.class appears to be corrupt! There has been CRITICAL TAMPERING WITH MINECRAFT, it is highly unlikely minecraft will work! STOP NOW, get a clean copy and try again!
+[18:09:06] [main/ERROR]: FML has been ordered to ignore the invalid or missing minecraft certificate. This is very likely to cause a problem!
+[18:09:06] [main/ERROR]: Technical information: ClientBrandRetriever was at jar:file:/C:/Users/Jason%20Archer/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.0.1179/forgeSrc-1.7.10-10.13.0.1179.jar!/net/minecraft/client/ClientBrandRetriever.class, there were 0 certificates for it
+[18:09:06] [main/ERROR]: FML appears to be missing any signature data. This is not a good thing
+[18:09:06] [main/INFO]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
+[18:09:06] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLDeobfTweaker
+[18:09:07] [main/INFO]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[18:09:12] [main/INFO]: Setting user: ForgeDevName
+[18:09:15] [Client thread/INFO]: LWJGL Version: 2.9.1
+[18:09:18] [Client thread/INFO]: Attempting early MinecraftForge initialization
+[18:09:18] [Client thread/INFO]: MinecraftForge v10.13.0.1179 Initialized
+[18:09:18] [Client thread/INFO]: Replaced 182 ore recipies
+[18:09:18] [Client thread/INFO]: Completed early MinecraftForge initialization
+[18:09:18] [Client thread/INFO]: Searching C:\minecraft code projects\Minecraft\1.7\RandomThoughtsMod\eclipse\mods for mods
+[18:09:26] [Client thread/WARN]: Zip file rt.jar failed to read properly, it will be ignored
 java.lang.NullPointerException
 	at cpw.mods.fml.common.discovery.asm.ASMModParser.isBaseMod(ASMModParser.java:130) ~[ASMModParser.class:?]
 	at cpw.mods.fml.common.ModContainerFactory.build(ModContainerFactory.java:34) ~[ModContainerFactory.class:?]
@@ -59,62 +59,60 @@ java.lang.NullPointerException
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.7.0_67]
 	at java.lang.reflect.Method.invoke(Method.java:606) ~[?:1.7.0_67]
 	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134) [idea_rt.jar:?]
-[18:50:59] [Client thread/ERROR]: FML has detected a mod that is using a package name based on 'net.minecraft.src' : net.minecraft.src.FMLRenderAccessLibrary. This is generally a severe programming error.  There should be no mod code in the minecraft namespace. MOVE YOUR MOD! If you're in eclipse, select your source code and 'refactor' it into a new package. Go on. DO IT NOW!
-[18:51:00] [Client thread/INFO]: Forge Mod Loader has identified 4 mods to load
-[18:51:02] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Random Thoughts Mod
-[18:51:02] [Client thread/INFO]: Processing ObjectHolder annotations
-[18:51:02] [Client thread/INFO]: Found 341 ObjectHolder annotations
-[18:51:02] [Client thread/INFO]: Configured a dormant chunk cache size of 0
-[18:51:02] [Client thread/INFO]: Pre Initialization Complete!
-[18:51:02] [Client thread/INFO]: Applying holder lookups
-[18:51:02] [Client thread/INFO]: Holder lookups applied
-[18:51:03] [Sound Library Loader/INFO]: Sound engine started
-[18:51:07] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[18:51:07] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[18:51:08] [Client thread/INFO]: Initialization Complete!
-[18:51:08] [Client thread/INFO]: Post Initialization Complete!
-[18:51:08] [Client thread/INFO]: Forge Mod Loader has successfully loaded 4 mods
-[18:51:08] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Random Thoughts Mod
-[18:51:08] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[18:51:09] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[18:51:10] [Sound Library Loader/INFO]: Sound engine started
-[18:51:18] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[18:51:18] [Server thread/INFO]: Generating keypair
-[18:51:19] [Server thread/INFO]: Injecting existing block and item data into this server instance
-[18:51:19] [Server thread/INFO]: Injecting new block and item data into this server instance.
-[18:51:19] [Server thread/INFO]: Injected new block/item RandomThoughtsMod:flag: 165 (init) -> 165 (map).
-[18:51:19] [Server thread/INFO]: Injected new block/item RandomThoughtsMod:flag: 165 (init) -> 165 (map).
-[18:51:19] [Server thread/INFO]: Applying holder lookups
-[18:51:19] [Server thread/INFO]: Holder lookups applied
-[18:51:19] [Server thread/INFO]: Loading dimension 0 (New World) (net.minecraft.server.integrated.IntegratedServer@32fe4570)
-[18:51:19] [Server thread/INFO]: Loading dimension 1 (New World) (net.minecraft.server.integrated.IntegratedServer@32fe4570)
-[18:51:19] [Server thread/INFO]: Loading dimension -1 (New World) (net.minecraft.server.integrated.IntegratedServer@32fe4570)
-[18:51:19] [Server thread/INFO]: Preparing start region for level 0
-[18:51:20] [Server thread/INFO]: Changing view distance to 12, from 10
-[18:51:23] [Netty Client IO #0/INFO]: Server protocol version 1
-[18:51:23] [Netty IO #1/INFO]: Client protocol version 1
-[18:51:23] [Netty IO #1/INFO]: Client attempting to join with 4 mods : mcp@9.05,FML@7.10.11.1170,Forge@10.13.0.1170,RandomThoughtsMod@1.7.10-B0.2
-[18:51:23] [Netty IO #1/INFO]: Attempting connection with missing mods [] at CLIENT
-[18:51:23] [Netty Client IO #0/INFO]: Attempting connection with missing mods [] at SERVER
-[18:51:23] [Client thread/INFO]: [Client thread] Client side modded connection established
-[18:51:23] [Server thread/INFO]: [Server thread] Server side modded connection established
-[18:51:23] [Server thread/INFO]: ForgeDevName[local:E:346532c5] logged in with entity id 0 at (484.70045194837013, 3.5, 44.56944119511172)
-[18:51:23] [Server thread/INFO]: ForgeDevName joined the game
-[18:51:45] [Server thread/INFO]: [ForgeDevName: Given [Canadian Flag of Awesomeness] * 1 to ForgeDevName]
-[18:51:45] [Client thread/INFO]: [CHAT] Given [Canadian Flag of Awesomeness] * 1 to ForgeDevName
-[18:51:49] [Server thread/INFO]: Saving and pausing game...
-[18:51:49] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[18:51:49] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[18:51:49] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[18:52:50] [Server thread/INFO]: Stopping server
-[18:52:50] [Server thread/INFO]: Saving players
-[18:52:51] [Server thread/INFO]: Saving worlds
-[18:52:51] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[18:52:51] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[18:52:51] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[18:52:51] [Server thread/INFO]: Unloading dimension 0
-[18:52:51] [Server thread/INFO]: Unloading dimension -1
-[18:52:51] [Server thread/INFO]: Unloading dimension 1
-[18:52:51] [Server thread/INFO]: Applying holder lookups
-[18:52:51] [Server thread/INFO]: Holder lookups applied
-[18:52:52] [Client thread/INFO]: Stopping!
+[18:09:30] [Client thread/ERROR]: FML has detected a mod that is using a package name based on 'net.minecraft.src' : net.minecraft.src.FMLRenderAccessLibrary. This is generally a severe programming error.  There should be no mod code in the minecraft namespace. MOVE YOUR MOD! If you're in eclipse, select your source code and 'refactor' it into a new package. Go on. DO IT NOW!
+[18:09:30] [Client thread/INFO]: Forge Mod Loader has identified 4 mods to load
+[18:09:32] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Random Thoughts Mod
+[18:09:32] [Client thread/INFO]: Processing ObjectHolder annotations
+[18:09:32] [Client thread/INFO]: Found 343 ObjectHolder annotations
+[18:09:32] [Client thread/INFO]: Configured a dormant chunk cache size of 0
+[18:09:32] [Client thread/INFO]: Pre Initialization Complete!
+[18:09:32] [Client thread/INFO]: Applying holder lookups
+[18:09:32] [Client thread/INFO]: Holder lookups applied
+[18:09:33] [Sound Library Loader/INFO]: Sound engine started
+[18:09:37] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[18:09:38] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[18:09:38] [Client thread/INFO]: Initialization Complete!
+[18:09:38] [Client thread/INFO]: Post Initialization Complete!
+[18:09:38] [Client thread/INFO]: Forge Mod Loader has successfully loaded 4 mods
+[18:09:38] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Random Thoughts Mod
+[18:09:39] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[18:09:39] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[18:09:40] [Sound Library Loader/INFO]: Sound engine started
+[18:09:49] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[18:09:49] [Server thread/INFO]: Generating keypair
+[18:09:50] [Server thread/INFO]: This world was saved with mod FML version 7.10.11.1170 and it is now at version 7.10.11.1179, things may not work well
+[18:09:50] [Server thread/INFO]: This world was saved with mod Forge version 10.13.0.1170 and it is now at version 10.13.0.1179, things may not work well
+[18:09:50] [Server thread/INFO]: Injecting existing block and item data into this server instance
+[18:09:50] [Server thread/INFO]: Applying holder lookups
+[18:09:50] [Server thread/INFO]: Holder lookups applied
+[18:09:50] [Server thread/INFO]: Loading dimension 0 (New World) (net.minecraft.server.integrated.IntegratedServer@6350f8cb)
+[18:09:50] [Server thread/INFO]: Loading dimension 1 (New World) (net.minecraft.server.integrated.IntegratedServer@6350f8cb)
+[18:09:50] [Server thread/INFO]: Loading dimension -1 (New World) (net.minecraft.server.integrated.IntegratedServer@6350f8cb)
+[18:09:50] [Server thread/INFO]: Preparing start region for level 0
+[18:09:51] [Server thread/INFO]: Preparing spawn area: 93%
+[18:09:51] [Server thread/INFO]: Changing view distance to 12, from 10
+[18:09:53] [Netty Client IO #0/INFO]: Server protocol version 1
+[18:09:53] [Netty IO #1/INFO]: Client protocol version 1
+[18:09:53] [Netty IO #1/INFO]: Client attempting to join with 4 mods : mcp@9.05,FML@7.10.11.1179,Forge@10.13.0.1179,RandomThoughtsMod@1.7.10-B0.2
+[18:09:53] [Netty IO #1/INFO]: Attempting connection with missing mods [] at CLIENT
+[18:09:53] [Netty Client IO #0/INFO]: Attempting connection with missing mods [] at SERVER
+[18:09:54] [Client thread/INFO]: [Client thread] Client side modded connection established
+[18:09:54] [Server thread/INFO]: [Server thread] Server side modded connection established
+[18:09:54] [Server thread/INFO]: ForgeDevName[local:E:554929d2] logged in with entity id 0 at (484.70045194837013, 3.5, 44.56944119511172)
+[18:09:54] [Server thread/INFO]: ForgeDevName joined the game
+[18:10:13] [Server thread/INFO]: Saving and pausing game...
+[18:10:13] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[18:10:13] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[18:10:13] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[18:10:14] [Server thread/INFO]: Stopping server
+[18:10:14] [Server thread/INFO]: Saving players
+[18:10:14] [Server thread/INFO]: Saving worlds
+[18:10:14] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[18:10:14] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[18:10:14] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[18:10:14] [Server thread/INFO]: Unloading dimension 0
+[18:10:14] [Server thread/INFO]: Unloading dimension -1
+[18:10:14] [Server thread/INFO]: Unloading dimension 1
+[18:10:14] [Server thread/INFO]: Applying holder lookups
+[18:10:14] [Server thread/INFO]: Holder lookups applied
+[18:10:15] [Client thread/INFO]: Stopping!

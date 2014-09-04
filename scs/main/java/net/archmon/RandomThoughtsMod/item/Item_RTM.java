@@ -2,6 +2,7 @@ package net.archmon.RandomThoughtsMod.item;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.archmon.RandomThoughtsMod.creativetab.CreativeTab_RTM;
 import net.archmon.RandomThoughtsMod.reference.Reference;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
@@ -14,6 +15,7 @@ public class Item_RTM extends Item
     {
         super();
         //Pahimar call's this an item wrapper.
+        this.setCreativeTab(CreativeTab_RTM.RTM_TAB);
     }
 
     @Override
