@@ -12,6 +12,7 @@ import net.archmon.RandomThoughtsMod.init.ModItems;
 import net.archmon.RandomThoughtsMod.proxy.IProxy;
 import net.archmon.RandomThoughtsMod.reference.Reference;
 import net.archmon.RandomThoughtsMod.utility.LogHelper;
+import net.minecraftforge.oredict.OreDictionary;
 
 //control-b for go to scs code
 @Mod(modid= Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
@@ -49,6 +50,13 @@ public class RandomThoughtsMod
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
+        /*for (String oreName : OreDictionary.getOreNames())
+        {
+            LogHelper.info(oreName);
+            OreDictionary.getOres(oreName);
+        }//just puts all of the names in log, sounds like debug thing.
+        */
+
         LogHelper.info("Post Initialization Complete!");
     }
 
