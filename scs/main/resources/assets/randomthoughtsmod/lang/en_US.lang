@@ -1,2 +1,4 @@
 item.randomthoughtsmod:mapleLeaf.name=Maple Leaf of Awesomeness
 tile.randomthoughtsmod:flag.name=Canadian Flag of Awesomeness
+itemGroup.randomthoughtsmod=Random Thoughts Mod
+item.randomthoughtsmod:Debug.name=Debug

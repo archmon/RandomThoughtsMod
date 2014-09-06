@@ -7,18 +7,14 @@ import net.minecraft.item.Item;
 
 public class CreativeTab_RTM
 {
-    public static final CreativeTabs RTM_TAB = new CreativeTabs(Reference.MOD_ID)
+    public static final CreativeTabs RTM_TAB = new CreativeTabs(Reference.MOD_ID.toLowerCase())
     {
         @Override
         public Item getTabIconItem()
         {
-            return ModItems.mapleLeaf;
+            return ModItems.Debug;
         }//Sets Icon for tab
 
-        @Override
-        public String getTranslatedTabLabel()
-        {
-            return "Random Thoughts Mod";
-        }//Sets Label
+
     };
 }
