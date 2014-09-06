@@ -24,7 +24,7 @@ archivesBaseName = "RandomThoughtsMod"
 
 minecraft {
     version = "1.7.10-10.13.0.1179"
-    assetDir = "eclipse/assets"
+
     //update forge, use terminal and input commands below
     //gradlew clean or gradlew clean --refresh-dependencies
     //gradlew setupdecompworkspace

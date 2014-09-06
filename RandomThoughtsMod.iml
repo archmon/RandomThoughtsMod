@@ -73,9 +73,9 @@
     <orderEntry type="library" exported="" name="Gradle: realms-1.2.9" level="project" />
     <orderEntry type="library" exported="" name="Gradle: scala-actors-2.11.0" level="project" />
     <orderEntry type="library" exported="" name="Gradle: forgeSrc-1.7.10-10.13.0.1179" level="project" />
+    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: C__Users_Jason_Archer__gradle_caches_minecraft_net_minecraftforge_forge_1_7_10_10_13_0_1179_start" level="project" />
     <orderEntry type="library" exported="" name="Gradle: scala-parser-combinators_2.11-1.0.1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: scala-xml_2.11-1.0.2" level="project" />
-    <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: C__Users_Jason_Archer__gradle_caches_minecraft_net_minecraftforge_forge_1_7_10_10_13_0_1179_start" level="project" />
   </component>
 </module>
 
