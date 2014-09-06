@@ -9,6 +9,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.archmon.RandomThoughtsMod.handler.ConfigurationHandler;
 import net.archmon.RandomThoughtsMod.init.ModBlocks;
 import net.archmon.RandomThoughtsMod.init.ModItems;
+import net.archmon.RandomThoughtsMod.init.Recipes;
 import net.archmon.RandomThoughtsMod.proxy.IProxy;
 import net.archmon.RandomThoughtsMod.reference.Reference;
 import net.archmon.RandomThoughtsMod.utility.LogHelper;
@@ -44,6 +45,7 @@ public class RandomThoughtsMod
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
+        Recipes.init();//registers Recipes
         LogHelper.info("Initialization Complete!");
     }
 
