@@ -9,4 +9,5 @@ public class Reference
     public static final String SERVER_PROXY_CLASS = "net.archmon.RandomThoughtsMod.proxy.ServerProxy";
     public static final String CLIENT_PROXY_CLASS = "net.archmon.RandomThoughtsMod.proxy.ClientProxy";
     public static final String GUI_FACTORY_CLASS = "net.archmon.RandomThoughtsMod.client.gui.GuiFactory";
+
 }

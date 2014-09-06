@@ -6,6 +6,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.archmon.RandomThoughtsMod.client.handler.KeyInputEventHandler;
 import net.archmon.RandomThoughtsMod.handler.ConfigurationHandler;
 import net.archmon.RandomThoughtsMod.init.ModBlocks;
 import net.archmon.RandomThoughtsMod.init.ModItems;
@@ -35,6 +36,8 @@ public class RandomThoughtsMod
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
         //register takes the @Subscribe events in it
 
+        proxy.registerKeyBindings();
+
         ModItems.init();//registered mod items.
 
         ModBlocks.init();//registered mod blocks.
@@ -46,6 +49,10 @@ public class RandomThoughtsMod
     public void init(FMLInitializationEvent event)
     {
         Recipes.init();//registers Recipes
+
+        FMLCommonHandler.instance().bus().register(new KeyInputEventHandler());
+        //registers key input handler
+
         LogHelper.info("Initialization Complete!");
     }
 

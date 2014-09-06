@@ -1,4 +1,15 @@
-item.randomthoughtsmod:mapleLeaf.name=Maple Leaf of Awesomeness
-tile.randomthoughtsmod:flag.name=Canadian Flag of Awesomeness
+# Keys
+keys.randomthoughtsmod.category=Random Thoughts Mod
+keys.randomthoughtsmod.charge=Charge
+keys.randomthoughtsmod.release=Release
+
+# Creative Tabs
 itemGroup.randomthoughtsmod=Random Thoughts Mod
+
+# Items
+item.randomthoughtsmod:mapleLeaf.name=Maple Leaf of Awesomeness
 item.randomthoughtsmod:Debug.name=Debug
+
+# Blocks
+tile.randomthoughtsmod:flag.name=Canadian Flag of Awesomeness
+

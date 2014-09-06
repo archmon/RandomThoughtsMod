@@ -16,7 +16,10 @@ public class Recipes
         //GameRegistry.addRecipe(new ItemStack(ModBlocks.flag), new ItemStack(ModItems.mapleLeaf), new ItemStack(ModItems.mapleLeaf));
 
         //"stickWood"=ore dictionary
-        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.mapleLeaf)," s ","sss"," s ", 's', "stickWood"));
-        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModBlocks.flag), "stickWood", new ItemStack(ModItems.mapleLeaf)));
+        GameRegistry.addRecipe(
+                new ShapedOreRecipe(new ItemStack(ModItems.mapleLeaf)," s ","sss"," s ", 's', "stickWood"));
+        GameRegistry.addRecipe(
+                new ShapelessOreRecipe(new ItemStack(ModBlocks.flag), "stickWood",
+                new ItemStack(ModItems.mapleLeaf)));
     }
 }
