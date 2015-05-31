@@ -8,9 +8,9 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 //import net.archmon.RandomThoughtsMod.client.handler.KeyInputEventHandler;
 import net.archmon.RandomThoughtsMod.handler.ConfigurationHandler;
-//import net.archmon.RandomThoughtsMod.init.ModBlocks;
-//import net.archmon.RandomThoughtsMod.init.ModItems;
-//import net.archmon.RandomThoughtsMod.init.Recipes;
+import net.archmon.RandomThoughtsMod.init.ModBlocks;
+import net.archmon.RandomThoughtsMod.init.ModItems;
+import net.archmon.RandomThoughtsMod.init.Recipes;
 import net.archmon.RandomThoughtsMod.reference.Reference;
 import net.archmon.RandomThoughtsMod.utility.LogHelper;
 import net.minecraftforge.oredict.OreDictionary;
@@ -36,9 +36,9 @@ public class RandomThoughtsMod{
 
         
 
-//ModItems.init();//registered mod items.
+    	ModItems.init();//registered mod items.
 
-//ModBlocks.init();//registered mod blocks.
+    	ModBlocks.init();//registered mod blocks.
 
         LogHelper.info("Pre Initialization Complete!");
     }
@@ -46,7 +46,7 @@ public class RandomThoughtsMod{
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
-//Recipes.init();//registers Recipes
+    	Recipes.init();//registers Recipes
 
 // FMLCommonHandler.instance().bus().register(new KeyInputEventHandler());
         //registers key input handler

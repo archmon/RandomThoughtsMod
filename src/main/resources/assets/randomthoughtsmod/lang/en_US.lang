@@ -1,7 +1,6 @@
 # Keys
 keys.randomthoughtsmod.category=Random Thoughts Mod
-keys.randomthoughtsmod.charge=Charge
-keys.randomthoughtsmod.release=Release
+
 
 # Creative Tabs
 itemGroup.randomthoughtsmod=Random Thoughts Mod
@@ -12,5 +11,5 @@ item.randomthoughtsmod:Debug.name=Debug
 
 # Blocks
 tile.randomthoughtsmod:flag.name=Canadian Flag of Awesomeness
-tile.randomthoughtsmod:Super Torch.name=Super Torch
+
 
