@@ -6,6 +6,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 //import net.archmon.RandomThoughtsMod.client.handler.KeyInputEventHandler;
 import net.archmon.RandomThoughtsMod.handler.ConfigurationHandler;
 import net.archmon.RandomThoughtsMod.init.ModBlocks;
@@ -13,8 +14,10 @@ import net.archmon.RandomThoughtsMod.init.ModItems;
 import net.archmon.RandomThoughtsMod.init.Recipes;
 import net.archmon.RandomThoughtsMod.reference.Reference;
 import net.archmon.RandomThoughtsMod.utility.LogHelper;
+import net.archmon.RandomThoughtsMod.world.gen.WorldGeneratorFlag;
 import net.minecraftforge.oredict.OreDictionary;
 
+//F3 eclipse=open declaration
 @Mod(modid= Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
 public class RandomThoughtsMod{
 	
@@ -32,12 +35,10 @@ public class RandomThoughtsMod{
         //debug does not show in log, same with trace. Default set to log fatal, error, warn, off, and info.
     	
     	FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
-        //register takes the @Subscribe events in it
-
-        
+        //register takes the @Subscribe events in it   
 
     	ModItems.init();//registered mod items.
-
+    	GameRegistry.registerWorldGenerator(new WorldGeneratorFlag(), 0);//number=priority generator has.
     	ModBlocks.init();//registered mod blocks.
 
         LogHelper.info("Pre Initialization Complete!");
