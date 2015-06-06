@@ -11,14 +11,12 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 //Generic class like Item_RTM
 public class Block_RTM extends Block
 {
-    //This is apparelling a constructor for the above class
     public Block_RTM(Material material)
     {
         super(material);
         this.setCreativeTab(CreativeTab_RTM.RTM_TAB);
     }
 
-    //This is also a constructor that takes no perimeters.
     public Block_RTM()
     {
         this(Material.rock);
@@ -29,7 +27,6 @@ public class Block_RTM extends Block
     {
         return String.format("tile.%s%s", Reference.MOD_ID.toLowerCase() + ":", getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
     }
-    //same as item except block=tile
 
     @Override
     @SideOnly(Side.CLIENT)

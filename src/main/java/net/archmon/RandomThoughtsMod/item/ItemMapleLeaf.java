@@ -14,7 +14,7 @@ public class ItemMapleLeaf extends Item_RTM
         //don't forget to go to en_US.lang and ModItems.java
         //this.maxStackSize = 1;
         //makes it to where each item is a full stack.
-        //this.setCreativeTab(CreativeTab_RTM.RTM_TAB);  //moved to generic class
+        
     }
 
 

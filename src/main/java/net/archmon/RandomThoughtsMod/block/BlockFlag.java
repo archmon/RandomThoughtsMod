@@ -5,8 +5,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 
-//import net.archmon.RandomThoughtsMod.creativetab.CreativeTab_RTM;
-//run in de-bug mode allows code to change on the fly.
 public class BlockFlag extends Block_RTM
 {
     public BlockFlag()
@@ -14,13 +12,12 @@ public class BlockFlag extends Block_RTM
         super();
         this.setBlockName("flag");
         this.setBlockTextureName("flag");
-        //this.setCreativeTab(CreativeTab_RTM.RTM_TAB);  //moved to generic class
     }
     
     /**
      * Called upon block activation (right click on the block.)
      */
-    @Override
+    /*@Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer entityPlayer, int side, float hitX, float hitY, float hitZ)
     {
         if (world.isAirBlock(x, y, z)){//allows for equivalent air blocks from mods
@@ -30,5 +27,5 @@ public class BlockFlag extends Block_RTM
         //can do absolute cords as well.
         }//end if, if makes it so will only replace if target block is air.
     	return true;//true makes it to where you have to shift-click to place block, useful for when you have gui.
-    }
+    }*/
 }

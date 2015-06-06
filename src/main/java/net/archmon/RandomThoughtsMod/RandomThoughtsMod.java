@@ -19,7 +19,8 @@ import net.minecraftforge.oredict.OreDictionary;
 
 //F3 eclipse=open declaration
 @Mod(modid= Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
-public class RandomThoughtsMod{
+public class RandomThoughtsMod
+{
 	
     @Mod.Instance(Reference.MOD_ID)
     public static RandomThoughtsMod instance;
@@ -28,21 +29,22 @@ public class RandomThoughtsMod{
     //public static IProxy proxy;
 
     @Mod.EventHandler
-    public void preInit(FMLPreInitializationEvent event){
+    public void preInit(FMLPreInitializationEvent event)
+    {
     	ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+    	
         //puts time, client thread/info, modID, message.
         //Also, info can be replaced with the different levels from log helper class
         //debug does not show in log, same with trace. Default set to log fatal, error, warn, off, and info.
     	
-    	FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
-        //register takes the @Subscribe events in it   
+    	FMLCommonHandler.instance().bus().register(new ConfigurationHandler()); //register takes the @Subscribe events in it   
 
     	ModItems.init();//registered mod items.
     	GameRegistry.registerWorldGenerator(new WorldGeneratorFlag(), 0);//number=priority generator has.
     	ModBlocks.init();//registered mod blocks.
 
         LogHelper.info("Pre Initialization Complete!");
-    }
+    }//end preInit
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
@@ -53,7 +55,7 @@ public class RandomThoughtsMod{
         //registers key input handler
 
         LogHelper.info("Initialization Complete!");
-    }
+    }//end init
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event)
@@ -66,6 +68,6 @@ public class RandomThoughtsMod{
         */
 
         LogHelper.info("Post Initialization Complete!");
-    }
+    }//end postInit
 
-}
+}//end class file

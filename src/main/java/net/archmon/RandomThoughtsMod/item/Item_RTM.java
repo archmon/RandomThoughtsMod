@@ -14,7 +14,6 @@ public class Item_RTM extends Item
     public Item_RTM()
     {
         super();
-        //Pahimar call's this an item wrapper.
         this.setCreativeTab(CreativeTab_RTM.RTM_TAB);
     }
 
@@ -37,7 +36,6 @@ public class Item_RTM extends Item
         itemIcon = iconRegister.registerIcon(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
     }//loads textures
     //@sideOnly(Side.CLIENT) says to program code that this is only on the client
-    //Just had to rename randomthoughtsmod in assets to all lowercase.
 
     protected String getUnwrappedUnlocalizedName(String unlocalizedName)
     {
