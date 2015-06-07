@@ -10,6 +10,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.archmon.RandomThoughtsMod.handler.ConfigurationHandler;
 import net.archmon.RandomThoughtsMod.init.ModBlocks;
 import net.archmon.RandomThoughtsMod.init.ModItems;
+import net.archmon.RandomThoughtsMod.init.ModTileEntities;
 import net.archmon.RandomThoughtsMod.init.Recipes;
 import net.archmon.RandomThoughtsMod.network.NetworkHandler;
 import net.archmon.RandomThoughtsMod.proxy.CommonProxy;
@@ -34,6 +35,7 @@ public class RandomThoughtsMod
     {
     	ModItems.init();//registered mod items.
     	ModBlocks.init();//registered mod blocks.
+    	ModTileEntities.init();
     	proxy.preInit();
     	GameRegistry.registerWorldGenerator(new WorldGeneratorFlag(), 0);//number=priority generator has.
     	NetworkHandler.init();
