@@ -5,7 +5,8 @@ import org.lwjgl.input.Keyboard;
 
 public enum Keybindings{
 
-    EXPLODE("key.RandomThoughtsMod.explode", Keyboard.KEY_G);
+    EXPLODE("key.RandomThoughtsMod.explode", Keyboard.KEY_G),
+    EXPLODE_BIG("key.RandomThoughtsMod.explodeBig", Keyboard.KEY_H);
 
     private final KeyBinding keybinding;
 

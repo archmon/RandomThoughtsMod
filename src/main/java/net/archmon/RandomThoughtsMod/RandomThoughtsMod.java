@@ -11,6 +11,7 @@ import net.archmon.RandomThoughtsMod.handler.ConfigurationHandler;
 import net.archmon.RandomThoughtsMod.init.ModBlocks;
 import net.archmon.RandomThoughtsMod.init.ModItems;
 import net.archmon.RandomThoughtsMod.init.Recipes;
+import net.archmon.RandomThoughtsMod.network.NetworkHandler;
 import net.archmon.RandomThoughtsMod.proxy.CommonProxy;
 import net.archmon.RandomThoughtsMod.reference.Reference;
 import net.archmon.RandomThoughtsMod.utility.LogHelper;
@@ -35,16 +36,12 @@ public class RandomThoughtsMod
     	ModBlocks.init();//registered mod blocks.
     	proxy.preInit();
     	GameRegistry.registerWorldGenerator(new WorldGeneratorFlag(), 0);//number=priority generator has.
-    	//NetworkHandler.init();
+    	NetworkHandler.init();
     	//NetworkRegistry.INSTANCE.registerGUIHandler(instance, newGuiHandler());
     	//MinecraftForge.EVENT_BUS.register(new RandomThoughtsModEventHandler());//For registering events from the net.miencraftforge.event package.
-    	FMLCommonHandler.instance().bus().register(new ConfigurationHandler()); //register takes the @Subscribe events in it  
-    	//For registering events from the cpw.mods.fml.gameevent package.[was on above, and had (new AdvancedModEventHandler());]
+ 
     	
-    	
-    	
-    	
-    	ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+    	//--!ConfigurationHandler.init(event.getSuggestedConfigurationFile());
     	
         //puts time, client thread/info, modID, message.
         //Also, info can be replaced with the different levels from log helper class
