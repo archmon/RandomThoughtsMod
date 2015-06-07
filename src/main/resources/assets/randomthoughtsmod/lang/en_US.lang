@@ -1,6 +1,6 @@
 # Keys
-keys.randomthoughtsmod.category=Random Thoughts Mod
-
+key.categories.RandomThoughtsMod=Random Thoughts Mod
+key.RandomThoughtsMod.explode=Explode
 
 # Creative Tabs
 itemGroup.randomthoughtsmod=Random Thoughts Mod

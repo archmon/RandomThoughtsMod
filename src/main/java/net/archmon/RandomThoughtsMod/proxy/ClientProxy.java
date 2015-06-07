@@ -1,7 +1,10 @@
 package net.archmon.RandomThoughtsMod.proxy;
 
+import net.archmon.RandomThoughtsMod.client.KeyInputHandler;
+import net.archmon.RandomThoughtsMod.client.Keybindings;
 import cpw.mods.fml.client.registry.ClientRegistry;
-//import net.archmon.RandomThoughtsMod.client.settings.Keybindings;
+import cpw.mods.fml.common.FMLCommonHandler;
+
 
 //extends means it is child of CommonProxy
 public class ClientProxy extends CommonProxy
@@ -9,10 +12,16 @@ public class ClientProxy extends CommonProxy
 
 	@Override
 	public void preInit() {
-		// TODO Auto-generated method stub
-		
+		registerKeybinds();
 	}
 
+	private void registerKeybinds(){
+		FMLCommonHandler.instance().bus().register(new KeyInputHandler());
+		for(Keybindings key : Keybindings.values()){
+			ClientRegistry.registerKeyBinding(key.getKeybind());
+		}
+	}
+	
 	@Override
 	public void init() {
 		// TODO Auto-generated method stub
@@ -24,11 +33,5 @@ public class ClientProxy extends CommonProxy
 		// TODO Auto-generated method stub
 		
 	}
-    /*@Override
-    public void registerKeyBindings()
-    {
-        //ClientRegistry.registerKeyBinding(Keybindings.charge);
-        //ClientRegistry.registerKeyBinding(Keybindings.release);
-    }*/
-	//removed as of minemaartin video 2
+   
 }
