@@ -27,8 +27,15 @@ public class BlockFlag extends Block_RTM
     @Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, 
     		float hitX, float hitY, float hitZ){
-		world.playSoundEffect(x, y, z, "RandomThoughtsMod:flagFlap.ogg", 1.0F, player.getRNG().nextFloat()+0.5F);
+		//world.playSoundEffect(x, y, z, "RandomThoughtsMod:flagFlap.ogg", 1.0F, player.getRNG().nextFloat()+0.5F);
 		//1.0F=default sound level for the 5 slot, 6slot=pitch
+    	if(!world.isRemote){
+    		world.createExplosion(player, x, y, z, 3, true);
+    		//above if makes createExplosion only on the server side
+    		/*FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER
+    		 * above statement can be used if no access to world is avaliable
+    		 */
+    	}
     	return true;
     	
     }
