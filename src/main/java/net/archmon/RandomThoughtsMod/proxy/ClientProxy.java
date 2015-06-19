@@ -2,6 +2,8 @@ package net.archmon.RandomThoughtsMod.proxy;
 
 import net.archmon.RandomThoughtsMod.client.KeyInputHandler;
 import net.archmon.RandomThoughtsMod.client.Keybindings;
+import net.minecraft.client.Minecraft;
+import net.minecraft.entity.player.EntityPlayer;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.common.FMLCommonHandler;
 
@@ -32,6 +34,11 @@ public class ClientProxy extends CommonProxy
 	public void postInit() {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public EntityPlayer getClientPlayer() {
+		return Minecraft.getMinecraft().thePlayer;
 	}
    
 }

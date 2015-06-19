@@ -12,6 +12,7 @@ import net.archmon.RandomThoughtsMod.init.ModBlocks;
 import net.archmon.RandomThoughtsMod.init.ModItems;
 import net.archmon.RandomThoughtsMod.init.ModTileEntities;
 import net.archmon.RandomThoughtsMod.init.Recipes;
+import net.archmon.RandomThoughtsMod.network.DescriptionHandler;
 import net.archmon.RandomThoughtsMod.network.NetworkHandler;
 import net.archmon.RandomThoughtsMod.proxy.CommonProxy;
 import net.archmon.RandomThoughtsMod.reference.Reference;
@@ -39,6 +40,7 @@ public class RandomThoughtsMod
     	proxy.preInit();
     	GameRegistry.registerWorldGenerator(new WorldGeneratorFlag(), 0);//number=priority generator has.
     	NetworkHandler.init();
+    	DescriptionHandler.init();
     	//NetworkRegistry.INSTANCE.registerGUIHandler(instance, newGuiHandler());
     	//MinecraftForge.EVENT_BUS.register(new RandomThoughtsModEventHandler());//For registering events from the net.miencraftforge.event package.
  

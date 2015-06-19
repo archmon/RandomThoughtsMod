@@ -1,5 +1,7 @@
 package net.archmon.RandomThoughtsMod.proxy;
 
+import net.minecraft.entity.player.EntityPlayer;
+
 public class ServerProxy extends CommonProxy
 //extends means it is child of CommonProxy
 {
@@ -20,6 +22,11 @@ public class ServerProxy extends CommonProxy
 	public void postInit() {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public EntityPlayer getClientPlayer() {
+		return null;
 	}
 	
 	/*@Override
