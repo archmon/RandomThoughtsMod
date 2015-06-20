@@ -1,42 +1,36 @@
 package net.archmon.RandomThoughtsMod.block;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.archmon.RandomThoughtsMod.creativetab.CreativeTab_RTM;
 import net.archmon.RandomThoughtsMod.reference.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 //Generic class like Item_RTM
-public class Block_RTM extends Block
-{
-    public Block_RTM(Material material)
-    {
-        super(material);
-        this.setCreativeTab(CreativeTab_RTM.RTM_TAB);
-    }
+public class Block_RTM extends Block{
+	public Block_RTM(Material material){
+		super(material);
+		setCreativeTab(CreativeTab_RTM.RTM_TAB);
+	}
 
-    public Block_RTM()
-    {
-        this(Material.rock);
-    }
+	public Block_RTM(){
+		this(Material.rock);
+	}
 
-    @Override
-    public String getUnlocalizedName()
-    {
-        return String.format("tile.%s%s", Reference.MOD_ID.toLowerCase() + ":", getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
-    }
+	@Override
+	public String getUnlocalizedName(){
+		return String.format("tile.%s%s", Reference.MOD_ID.toLowerCase() + ":", getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+	}
 
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister iconRegister)
-    {
-        blockIcon = iconRegister.registerIcon(String.format("%s", getUnwrappedUnlocalizedName(this.getUnlocalizedName())));
-    }
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void registerBlockIcons(IIconRegister iconRegister){
+		blockIcon = iconRegister.registerIcon(String.format("%s", getUnwrappedUnlocalizedName(getUnlocalizedName())));
+	}
 
-    protected String getUnwrappedUnlocalizedName(String unlocalizedName)
-    {
-        return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
-    }
+	protected String getUnwrappedUnlocalizedName(String unlocalizedName){
+		return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
+	}
 }

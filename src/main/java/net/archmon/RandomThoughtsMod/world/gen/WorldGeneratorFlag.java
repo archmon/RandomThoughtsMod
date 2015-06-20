@@ -14,25 +14,24 @@ import net.minecraftforge.fluids.FluidRegistry;
 import cpw.mods.fml.common.IWorldGenerator;
 
 public class WorldGeneratorFlag implements IWorldGenerator{
-	private WorldGenMinable flagGen = new WorldGenMinable(ModBlocks.flag, 32);//oreGen
-	
+	private final WorldGenMinable flagGen = new WorldGenMinable(ModBlocks.flag, 32);//oreGen 
+
 	@Override
-	public void generate(Random random, int chunkX, int chunkZ, World world,
-			IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
+	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider){
 		int x = chunkX * 16;
 		int z = chunkZ * 16;
 		switch(world.provider.dimensionId){
-        	case 0:
-        		generateSurface(world, x, z, random);
-        		break;
-        	case -1:
-        		generateNether(world, x, z, random);
-        		break;
-        	case 1:
-        		generateEnd(world, x, z, random);
-        		break;
-        	default:
-        		generateSurface(world, x, z, random);
+			case 0:
+				generateSurface(world, x, z, random);
+				break;
+			case -1:
+				generateNether(world, x, z, random);
+				break;
+			case 1:
+				generateEnd(world, x, z, random);
+				break;
+			default:
+				generateSurface(world, x, z, random);
 		}
 	}
 
@@ -50,11 +49,10 @@ public class WorldGeneratorFlag implements IWorldGenerator{
 			int randZ = z + random.nextInt(16);
 			int randY = world.getHeightValue(randX, randZ);
 
-			if(randY <= (world.getHeight() - 10) && world.getBiomeGenForCoords(randX, randZ) != BiomeGenBase.river 
-					&& world.getBiomeGenForCoords(randX, randZ) != BiomeGenBase.ocean) {
+			if(randY <= world.getHeight() - 10 && world.getBiomeGenForCoords(randX, randZ) != BiomeGenBase.river && world.getBiomeGenForCoords(randX, randZ) != BiomeGenBase.ocean) {
 				Block block = world.getBlock(randX, randY - 1, randZ);
 				//if(block != Blocks.water && block != Blocks.lava && block != Blocks.flowing_water && block != Blocks.flowing_lava) {
-				if (!(block instanceof BlockLiquid || FluidRegistry.lookupFluidForBlock(block) != null)) {
+				if(!(block instanceof BlockLiquid || FluidRegistry.lookupFluidForBlock(block) != null)) {
 					generateFlag(world, randX, randY, randZ);
 				}
 			}
@@ -74,7 +72,7 @@ public class WorldGeneratorFlag implements IWorldGenerator{
 		}
 		for(int dx = 0; dx < 3; dx++) {
 			for(int dy = 0; dy < 3; dy++) {
-				world.setBlock(x + 1 + dx, y + (10 - 3) + dy, z, ModBlocks.flag, 0, 2);
+				world.setBlock(x + 1 + dx, y + 10 - 3 + dy, z, ModBlocks.flag, 0, 2);
 			}
 		}
 	}
