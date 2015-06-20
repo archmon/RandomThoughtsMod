@@ -6,6 +6,7 @@ import net.archmon.RandomThoughtsMod.reference.Reference;
 import net.archmon.RandomThoughtsMod.tileentity.TileEntityCamoMine;
 import net.archmon.RandomThoughtsMod.utility.Names;
 import net.minecraft.block.Block;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
@@ -18,7 +19,7 @@ public class BlockCamoMine extends Block_RandomThoughtsMod_TitleEntity {
 
 	public BlockCamoMine(){
 		this.setBlockName(Names.Blocks.CAMO_MINE);
-        this.setBlockTextureName(Reference.MOD_ID_LOWER + ":" + Names.Blocks.CAMO_MINE);
+        this.setBlockTextureName(Reference.MOD_ID_LOWER + ":" + Names.Blocks.FLAG);
 	}
 	
 	@Override
@@ -31,7 +32,18 @@ public class BlockCamoMine extends Block_RandomThoughtsMod_TitleEntity {
     		float hitX, float hitY, float hitZ){
 		if(!world.isRemote){
 			TileEntityCamoMine te = (TileEntityCamoMine)world.getTileEntity(x, y, z);
-			te.setCamouflage(player.getCurrentEquippedItem());
+			if(te.getCamouflage(side)!=null){
+				ItemStack camoStack = te.getCamouflage(side);
+				te.setCamouflage(null,side);
+				EntityItem itemEntity = new EntityItem(world, x,y,z,camoStack);
+				world.spawnEntityInWorld(itemEntity);
+			}else{
+				ItemStack playerItem = player.getCurrentEquippedItem();
+				if(playerItem!=null){
+					ItemStack camoStack = playerItem.splitStack(1);
+					te.setCamouflage(camoStack,side);
+				}
+			}
 		}
 		return true;
 	}
@@ -40,7 +52,7 @@ public class BlockCamoMine extends Block_RandomThoughtsMod_TitleEntity {
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(IBlockAccess world, int x, int y, int z , int side){
 		TileEntityCamoMine te = (TileEntityCamoMine)world.getTileEntity(x, y, z);
-		ItemStack stack = te.getCamouflage();
+		ItemStack stack = te.getCamouflage(side);
 		if(stack != null && stack.getItem() instanceof ItemBlock){
 			Block block=((ItemBlock)stack.getItem()).field_150939_a;
 			return block.getIcon(side, stack.getItemDamage());
