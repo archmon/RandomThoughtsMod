@@ -2,6 +2,8 @@ package net.archmon.RandomThoughtsMod.block;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.archmon.RandomThoughtsMod.GuiHandler;
+import net.archmon.RandomThoughtsMod.RandomThoughtsMod;
 import net.archmon.RandomThoughtsMod.reference.Reference;
 import net.archmon.RandomThoughtsMod.tileentity.TileEntityCamoMine;
 import net.archmon.RandomThoughtsMod.utility.Names;
@@ -31,6 +33,9 @@ public class BlockCamoMine extends Block_RandomThoughtsMod_TitleEntity {
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, 
     		float hitX, float hitY, float hitZ){
 		if(!world.isRemote){
+			player.openGui(RandomThoughtsMod.instance, GuiHandler.GuiIDs.CAMO_MINE.ordinal(), world, x, y, z);
+			
+			/*  //removed in MineMaarten video 7, GUI part 1/2
 			TileEntityCamoMine te = (TileEntityCamoMine)world.getTileEntity(x, y, z);
 			if(te.getCamouflage(side)!=null){
 				ItemStack camoStack = te.getCamouflage(side);
@@ -43,7 +48,7 @@ public class BlockCamoMine extends Block_RandomThoughtsMod_TitleEntity {
 					ItemStack camoStack = playerItem.splitStack(1);
 					te.setCamouflage(camoStack,side);
 				}
-			}
+			}*/
 		}
 		return true;
 	}

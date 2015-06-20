@@ -6,6 +6,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.archmon.RandomThoughtsMod.handler.ConfigurationHandler;
 import net.archmon.RandomThoughtsMod.init.ModBlocks;
@@ -41,7 +42,7 @@ public class RandomThoughtsMod
     	GameRegistry.registerWorldGenerator(new WorldGeneratorFlag(), 0);//number=priority generator has.
     	NetworkHandler.init();
     	DescriptionHandler.init();
-    	//NetworkRegistry.INSTANCE.registerGUIHandler(instance, newGuiHandler());
+    	NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
     	//MinecraftForge.EVENT_BUS.register(new RandomThoughtsModEventHandler());//For registering events from the net.miencraftforge.event package.
  
     	
