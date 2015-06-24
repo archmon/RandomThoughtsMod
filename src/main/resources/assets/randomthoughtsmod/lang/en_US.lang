@@ -11,6 +11,7 @@ item.randomthoughtsmod:Debug.name=Debug
 
 # Blocks
 tile.randomthoughtsmod:flag.name=Canadian Flag of Awesomeness
+tile.camoMine.name=Camo Mine
 
 #GUI
 

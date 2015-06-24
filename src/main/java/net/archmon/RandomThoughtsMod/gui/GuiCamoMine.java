@@ -7,11 +7,7 @@ import net.minecraft.entity.player.InventoryPlayer;
 public class GuiCamoMine extends Gui_RandomThoughtsMod{
 
 	public GuiCamoMine(InventoryPlayer playerInventory, TileEntityCamoMine te){
-		super(new ContainerCamoMine(playerInventory, te));
+		super(new ContainerCamoMine(playerInventory, te), "camoMine", te);
 	}
 
-	@Override
-	protected void drawGuiContainerBackgroundLayer(float p_146976_1_, int p_146976_2_, int p_146976_3_){
-
-	}
 }
