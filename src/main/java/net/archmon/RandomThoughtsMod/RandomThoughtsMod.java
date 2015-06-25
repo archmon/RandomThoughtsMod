@@ -1,5 +1,6 @@
 package net.archmon.RandomThoughtsMod;
 
+import net.archmon.RandomThoughtsMod.event.RandomThoughtsModEventHandler;
 import net.archmon.RandomThoughtsMod.init.ModBlocks;
 import net.archmon.RandomThoughtsMod.init.ModItems;
 import net.archmon.RandomThoughtsMod.init.ModTileEntities;
@@ -10,6 +11,8 @@ import net.archmon.RandomThoughtsMod.proxy.CommonProxy;
 import net.archmon.RandomThoughtsMod.reference.Reference;
 import net.archmon.RandomThoughtsMod.utility.LogHelper;
 import net.archmon.RandomThoughtsMod.world.gen.WorldGeneratorFlag;
+import net.minecraftforge.common.MinecraftForge;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -38,8 +41,8 @@ public class RandomThoughtsMod{
 		NetworkHandler.init();
 		DescriptionHandler.init();
 		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
-		//MinecraftForge.EVENT_BUS.register(new RandomThoughtsModEventHandler());//For registering events from the net.miencraftforge.event package.
-
+		MinecraftForge.EVENT_BUS.register(new RandomThoughtsModEventHandler());//For registering events from the net.miencraftforge.event package.
+		FMLCommonHandler.instance().bus().register(new RandomThoughtsModEventHandler());//minecraft event
 		//--!ConfigurationHandler.init(event.getSuggestedConfigurationFile());
 
 		//puts time, client thread/info, modID, message.
