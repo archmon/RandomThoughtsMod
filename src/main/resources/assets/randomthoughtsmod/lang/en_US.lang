@@ -17,6 +17,7 @@ tile.camoMine.name=Camo Mine
 gui.randomthoughtsmod.camoMine.timer=Timer: %s ticks
 gui.randomthoughtsmod.camoMine.button.reset=Reset
 gui.randomthoughtsmod.camoMine.button.restart=Restart
+gui.randomthoughtsmod.camoMine.target=Target:
 
 #Waila
 

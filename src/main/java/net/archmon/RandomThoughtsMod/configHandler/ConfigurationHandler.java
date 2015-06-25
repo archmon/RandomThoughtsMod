@@ -1,4 +1,4 @@
-package net.archmon.RandomThoughtsMod.handler;
+package net.archmon.RandomThoughtsMod.configHandler;
 
 import java.io.File;
 

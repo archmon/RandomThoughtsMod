@@ -5,31 +5,25 @@ import net.archmon.RandomThoughtsMod.tileentity.TileEntity_RandomThoughtsMod;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 
-public class MessageHandlerGuiButtonPress extends MessageBase<MessageHandlerGuiButtonPress>{
-	private int x, y, z, id;
+public class MessageHandlerGuiButtonPress extends MessageXYZ<MessageHandlerGuiButtonPress>{
+	private int id;
 
 	public MessageHandlerGuiButtonPress(){}
 
 	public MessageHandlerGuiButtonPress(TileEntity_RandomThoughtsMod te, int id){
-		x = te.xCoord;
-		y = te.yCoord;
-		z = te.zCoord;
+		super(te);
 		this.id = id;
 	}
 
 	@Override
 	public void fromBytes(ByteBuf buf){
-		x = buf.readInt();
-		y = buf.readInt();
-		z = buf.readInt();
+		super.fromBytes(buf);
 		id = buf.readInt();
 	}
 
 	@Override
 	public void toBytes(ByteBuf buf){
-		buf.writeInt(x);
-		buf.writeInt(y);
-		buf.writeInt(z);
+		super.toBytes(buf);
 		buf.writeInt(id);
 	}
 

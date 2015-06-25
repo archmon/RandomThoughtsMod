@@ -1,5 +1,6 @@
 package net.archmon.RandomThoughtsMod.network;
 
+import net.archmon.RandomThoughtsMod.RandomThoughtsMod;
 import net.minecraft.entity.player.EntityPlayer;
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
 import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
@@ -13,7 +14,7 @@ public abstract class MessageBase<REQ extends IMessage> implements IMessage, IMe
 		if(ctx.side == Side.SERVER) {
 			handleServerSide(message, ctx.getServerHandler().playerEntity);
 		} else {
-			handleClientSide(message, null);
+			handleClientSide(message, RandomThoughtsMod.proxy.getClientPlayer());
 		}
 		return null;
 	}

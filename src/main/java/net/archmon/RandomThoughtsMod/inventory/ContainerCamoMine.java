@@ -2,8 +2,11 @@ package net.archmon.RandomThoughtsMod.inventory;
 
 import java.util.List;
 
+import net.archmon.RandomThoughtsMod.network.MessageHandleTextUpdate;
+import net.archmon.RandomThoughtsMod.network.NetworkHandler;
 import net.archmon.RandomThoughtsMod.tileentity.TileEntityCamoMine;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
@@ -14,6 +17,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class ContainerCamoMine extends Container_RandomThoughtsMod{
 	private final TileEntityCamoMine te;
 	private int lastTimer = -1;
+	private String lastTarget = "";
 
 	public ContainerCamoMine(InventoryPlayer playerInventory, TileEntityCamoMine te){
 		addSlotToContainer(new SlotCamouflage(te, 0, 80, 58));
@@ -40,6 +44,14 @@ public class ContainerCamoMine extends Container_RandomThoughtsMod{
 				crafter.sendProgressBarUpdate(this, 0, te.getTimer());
 			}
 			lastTimer = te.getTimer();
+		}
+		if(!lastTarget.equals(te.getTarget())) {
+			for(Object crafter : crafters) {
+				if(crafter instanceof EntityPlayerMP) {
+					NetworkHandler.sendTo(new MessageHandleTextUpdate(te, 0, te.getTarget()), (EntityPlayerMP)crafter);
+				}
+			}
+			lastTarget = te.getTarget();
 		}
 	}
 

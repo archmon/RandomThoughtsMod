@@ -2,6 +2,7 @@ package net.archmon.RandomThoughtsMod.network;
 
 import net.archmon.RandomThoughtsMod.reference.Reference;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.world.World;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.NetworkRegistry.TargetPoint;
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
@@ -17,6 +18,8 @@ public class NetworkHandler{
 		INSTANCE.registerMessage(MessageExplode.class, MessageExplode.class, 0, Side.SERVER);
 		//discriminator aka third slot =id of packet|Side.SERVER is side that receives packet 
 		INSTANCE.registerMessage(MessageHandlerGuiButtonPress.class, MessageHandlerGuiButtonPress.class, 1, Side.SERVER);
+		INSTANCE.registerMessage(MessageHandleTextUpdate.class, MessageHandleTextUpdate.class, 2, Side.SERVER);
+		INSTANCE.registerMessage(MessageHandleTextUpdate.class, MessageHandleTextUpdate.class, 3, Side.CLIENT);
 	}
 
 	public static void sendToServer(IMessage message){
@@ -29,6 +32,15 @@ public class NetworkHandler{
 
 	public static void sendToAllAround(IMessage message, TargetPoint point){
 		INSTANCE.sendToAllAround(message, point);
+	}
+
+	/**
+	 * Will send the given packet to every player within 64 blocks of the xyz of the xyz packet.
+	 * @param message
+	 * @param world
+	 */
+	public static void sendToAllAround(MessageXYZ message, World world){
+		INSTANCE.sendToAllAround(message, new TargetPoint(world.provider.dimensionId, message.x, message.y, message.z, 64D));
 	}
 
 	public static void sendToAll(IMessage message){
