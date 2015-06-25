@@ -1,13 +1,19 @@
 package net.archmon.RandomThoughtsMod.inventory;
 
+import java.util.List;
+
 import net.archmon.RandomThoughtsMod.tileentity.TileEntityCamoMine;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class ContainerCamoMine extends Container_RandomThoughtsMod{
 	private final TileEntityCamoMine te;
+	private int lastTimer = -1;
 
 	public ContainerCamoMine(InventoryPlayer playerInventory, TileEntityCamoMine te){
 		addSlotToContainer(new SlotCamouflage(te, 0, 80, 58));
@@ -24,6 +30,26 @@ public class ContainerCamoMine extends Container_RandomThoughtsMod{
 	@Override
 	public boolean canInteractWith(EntityPlayer player){
 		return te.isUseableByPlayer(player);
+	}
+
+	@Override
+	public void detectAndSendChanges(){
+		super.detectAndSendChanges();
+		if(lastTimer != te.getTimer()) {
+			for(ICrafting crafter : (List<ICrafting>)crafters) {
+				crafter.sendProgressBarUpdate(this, 0, te.getTimer());
+			}
+			lastTimer = te.getTimer();
+		}
+	}
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void updateProgressBar(int id, int value){
+		super.updateProgressBar(id, value);
+		if(id == 0) {
+			te.setTimer(value);
+		}
 	}
 
 	/**

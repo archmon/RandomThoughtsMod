@@ -30,6 +30,21 @@ public class TileEntityCamoMine extends TileEntity_RandomThoughtsMod implements 
 		}
 	}
 
+	public void setTimer(int value){
+		timer = value;
+	}
+
+	public int getTimer(){
+		return timer;
+	}
+
+	@Override
+	public void onGuiButtonPress(int id){
+		if(id == 0) {
+			timer = 60;
+		}
+	}
+
 	public void setCamouflage(ItemStack stack, int side){
 		setInventorySlotContents(side, stack);
 	}

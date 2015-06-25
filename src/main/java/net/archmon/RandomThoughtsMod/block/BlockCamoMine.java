@@ -6,6 +6,7 @@ import net.archmon.RandomThoughtsMod.reference.Reference;
 import net.archmon.RandomThoughtsMod.tileentity.TileEntityCamoMine;
 import net.archmon.RandomThoughtsMod.utility.Names;
 import net.minecraft.block.Block;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
@@ -31,22 +32,25 @@ public class BlockCamoMine extends Block_RandomThoughtsMod_TitleEntity{
 	@Override
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ){
 		if(!world.isRemote) {
-			player.openGui(RandomThoughtsMod.instance, GuiHandler.GuiIDs.CAMO_MINE.ordinal(), world, x, y, z);
-
-			/*  //removed in MineMaarten video 7, GUI part 1/2
-			TileEntityCamoMine te = (TileEntityCamoMine)world.getTileEntity(x, y, z);
-			if(te.getCamouflage(side)!=null){
-				ItemStack camoStack = te.getCamouflage(side);
-				te.setCamouflage(null,side);
-				EntityItem itemEntity = new EntityItem(world, x,y,z,camoStack);
-				world.spawnEntityInWorld(itemEntity);
-			}else{
-				ItemStack playerItem = player.getCurrentEquippedItem();
-				if(playerItem!=null){
-					ItemStack camoStack = playerItem.splitStack(1);
-					te.setCamouflage(camoStack,side);
+			if(player.isSneaking()) {
+				player.openGui(RandomThoughtsMod.instance, GuiHandler.GuiIDs.CAMO_MINE.ordinal(), world, x, y, z);
+			} else {
+				//removed in MineMaarten video 7, GUI part 1/2
+				//added back in MineMaarten video 8, more about GUI 1/2
+				TileEntityCamoMine te = (TileEntityCamoMine)world.getTileEntity(x, y, z);
+				if(te.getCamouflage(side) != null) {
+					ItemStack camoStack = te.getCamouflage(side);
+					te.setCamouflage(null, side);
+					EntityItem itemEntity = new EntityItem(world, x, y, z, camoStack);
+					world.spawnEntityInWorld(itemEntity);
+				} else {
+					ItemStack playerItem = player.getCurrentEquippedItem();
+					if(playerItem != null) {
+						ItemStack camoStack = playerItem.splitStack(1);
+						te.setCamouflage(camoStack, side);
+					}
 				}
-			}*/
+			}
 		}
 		return true;
 	}

@@ -19,11 +19,9 @@ public class TileEntity_RandomThoughtsMod extends TileEntity{
 		return new FMLProxyPacket(buf, DescriptionHandler.CHANNEL);
 	}
 
-	public void writeToPacket(ByteBuf buf){
+	public void writeToPacket(ByteBuf buf){}
 
-	}
+	public void readFromPacket(ByteBuf buf){}
 
-	public void readFromPacket(ByteBuf buf){
-
-	}
+	public void onGuiButtonPress(int id){}
 }

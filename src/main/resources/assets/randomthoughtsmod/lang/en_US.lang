@@ -14,7 +14,9 @@ tile.randomthoughtsmod:flag.name=Canadian Flag of Awesomeness
 tile.camoMine.name=Camo Mine
 
 #GUI
-
+gui.randomthoughtsmod.camoMine.timer=Timer: %s ticks
+gui.randomthoughtsmod.camoMine.button.reset=Reset
+gui.randomthoughtsmod.camoMine.button.restart=Restart
 
 #Waila
 
