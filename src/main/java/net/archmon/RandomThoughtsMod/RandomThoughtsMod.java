@@ -9,13 +9,19 @@ import net.archmon.RandomThoughtsMod.network.DescriptionHandler;
 import net.archmon.RandomThoughtsMod.network.NetworkHandler;
 import net.archmon.RandomThoughtsMod.proxy.CommonProxy;
 import net.archmon.RandomThoughtsMod.reference.Reference;
+import net.archmon.RandomThoughtsMod.tileentity.TileEntityCamoMine;
 import net.archmon.RandomThoughtsMod.utility.LogHelper;
 import net.archmon.RandomThoughtsMod.world.gen.WorldGeneratorFlag;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLInterModComms;
+import cpw.mods.fml.common.event.FMLInterModComms.IMCEvent;
+import cpw.mods.fml.common.event.FMLInterModComms.IMCMessage;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
@@ -43,7 +49,8 @@ public class RandomThoughtsMod{
 		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
 		MinecraftForge.EVENT_BUS.register(new RandomThoughtsModEventHandler());//For registering events from the net.miencraftforge.event package.
 		FMLCommonHandler.instance().bus().register(new RandomThoughtsModEventHandler());//minecraft event
-		//--!ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+		FMLInterModComms.sendMessage(Reference.MOD_ID, "camoMineBlacklist", new ItemStack(Blocks.hopper));
+		//ConfigurationHandler.init(event.getSuggestedConfigurationFile());
 
 		//puts time, client thread/info, modID, message.
 		//Also, info can be replaced with the different levels from log helper class
@@ -61,6 +68,27 @@ public class RandomThoughtsMod{
 	}//end init
 
 	@Mod.EventHandler
+	public void onIMCMessages(IMCEvent event){
+		for(IMCMessage message : event.getMessages()) {
+			if(message.key.equalsIgnoreCase("camoMineBlacklist")) {
+				if(message.isItemStackMessage()) {
+					ItemStack blacklistedStack = message.getItemStackValue();
+					if(blacklistedStack.getItem() != null) {
+						TileEntityCamoMine.camouflageBlacklist.add(blacklistedStack);
+						LogHelper.info(String.format("Mod %s added %s to be blacklisted as camouflage for the Camo Mine", message.getSender(), blacklistedStack.toString()));
+					} else {
+						throw new IllegalStateException(String.format("ItemStack tried to be used in registry by the mod %s has a null item.", message.getSender()));
+					}
+				} else {
+					LogHelper.warn(String.format("Mod %s sent a non-ItemStack message, where an ItemStack was expected.", message.getSender()));
+				}
+			} else {
+				LogHelper.warn(String.format("Mod %s used an invalid IMC key: %s", message.getSender(), message.key));
+			}
+		}
+	}
+
+	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent event){
 		proxy.postInit();
 
@@ -68,6 +96,7 @@ public class RandomThoughtsMod{
 	}//end postInit
 
 }//end class file
+
 /* Removed code from PostInit 6/6/15 7:36pm
    for (String oreName : OreDictionary.getOreNames())
         {

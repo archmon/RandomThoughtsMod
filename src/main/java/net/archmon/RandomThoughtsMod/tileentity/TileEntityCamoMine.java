@@ -2,6 +2,7 @@ package net.archmon.RandomThoughtsMod.tileentity;
 
 import io.netty.buffer.ByteBuf;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import net.archmon.RandomThoughtsMod.init.ModBlocks;
@@ -19,6 +20,7 @@ public class TileEntityCamoMine extends TileEntity_RandomThoughtsMod implements 
 	private int timer = 60;//20 ticks in 1 sec 
 	private String target = "";
 	private ItemStack[] camoStacks = new ItemStack[6];
+	public static List<ItemStack> camouflageBlacklist = new ArrayList<ItemStack>();
 
 	@Override
 	public void updateEntity(){
@@ -248,6 +250,9 @@ public class TileEntityCamoMine extends TileEntity_RandomThoughtsMod implements 
 	 */
 	@Override
 	public boolean isItemValidForSlot(int slot, ItemStack stack){
+		for(ItemStack blacklistedStack : camouflageBlacklist) {
+			if(blacklistedStack.isItemEqual(stack)) return false;
+		}
 		return stack != null && stack.getItem() instanceof ItemBlock;
 	}
 
