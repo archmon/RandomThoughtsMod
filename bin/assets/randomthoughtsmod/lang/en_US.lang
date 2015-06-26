@@ -20,7 +20,4 @@ gui.randomthoughtsmod.camoMine.button.restart=Restart
 gui.randomthoughtsmod.camoMine.target=Target:
 
 #Waila
-randomthoughtsmod.waila.camoMine.target=Target:
-randomthoughtsmod.waila.camoMine.notprimed=Not Primed
-randomthoughtsmod.waila.camoMine.primed=Primed
-randomthoughtsmod.waila.camoMine.primingIn=Priming In:
+

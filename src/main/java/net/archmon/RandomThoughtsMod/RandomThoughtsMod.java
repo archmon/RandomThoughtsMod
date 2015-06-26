@@ -12,7 +12,6 @@ import net.archmon.RandomThoughtsMod.reference.Reference;
 import net.archmon.RandomThoughtsMod.tileentity.TileEntityCamoMine;
 import net.archmon.RandomThoughtsMod.utility.LogHelper;
 import net.archmon.RandomThoughtsMod.world.gen.WorldGeneratorFlag;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -49,7 +48,8 @@ public class RandomThoughtsMod{
 		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
 		MinecraftForge.EVENT_BUS.register(new RandomThoughtsModEventHandler());//For registering events from the net.miencraftforge.event package.
 		FMLCommonHandler.instance().bus().register(new RandomThoughtsModEventHandler());//minecraft event
-		FMLInterModComms.sendMessage(Reference.MOD_ID, "camoMineBlacklist", new ItemStack(Blocks.hopper));
+		//FMLInterModComms.sendMessage(Reference.MOD_ID, "camoMineBlacklist", new ItemStack(Blocks.hopper));
+		FMLInterModComms.sendMessage("Waila", "register", "net.archmon.RandomThoughtsMod.thirdparty.waila.Waila.onWailaCall");
 		//ConfigurationHandler.init(event.getSuggestedConfigurationFile());
 
 		//puts time, client thread/info, modID, message.
