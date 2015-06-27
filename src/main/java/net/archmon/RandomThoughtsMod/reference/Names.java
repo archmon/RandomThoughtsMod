@@ -1,6 +1,5 @@
-package net.archmon.RandomThoughtsMod.utility;
+package net.archmon.RandomThoughtsMod.reference;
 
-import net.archmon.RandomThoughtsMod.reference.Reference;
 
 public class Names{
 	public static class Blocks{

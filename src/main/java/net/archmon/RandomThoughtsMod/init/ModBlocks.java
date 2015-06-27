@@ -3,8 +3,8 @@ package net.archmon.RandomThoughtsMod.init;
 import net.archmon.RandomThoughtsMod.block.BlockCamoMine;
 import net.archmon.RandomThoughtsMod.block.BlockFlag;
 import net.archmon.RandomThoughtsMod.block.Block_RTM;
+import net.archmon.RandomThoughtsMod.reference.Names;
 import net.archmon.RandomThoughtsMod.reference.Reference;
-import net.archmon.RandomThoughtsMod.utility.Names;
 import net.minecraft.block.Block;
 import cpw.mods.fml.common.registry.GameRegistry;
 
