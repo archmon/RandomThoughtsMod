@@ -14,8 +14,13 @@ import net.archmon.RandomThoughtsMod.utility.LogHelper;
 import net.archmon.RandomThoughtsMod.world.gen.WorldGeneratorFlag;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
+import thaumcraft.api.ThaumcraftApi;
+import thaumcraft.api.aspects.Aspect;
+import thaumcraft.api.aspects.AspectList;
 import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Optional;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLInterModComms;
@@ -56,8 +61,19 @@ public class RandomThoughtsMod{
 		//Also, info can be replaced with the different levels from log helper class
 		//debug does not show in log, same with trace. Default set to log fatal, error, warn, off, and info.
 
-		LogHelper.info("Pre Initialization Complete!");
+		LogHelper.info("Pre Initialization Complete! besides optional mods.");
+
+		if(Loader.isModLoaded("Thaumcraft")) {
+			loadThaumcraft();
+		}
+
+		LogHelper.info("Pre Initialization Really Complete!");
 	}//end preInit
+
+	@Optional.Method(modid = "Thaumcraft")
+	private void loadThaumcraft(){
+		ThaumcraftApi.registerObjectTag(new ItemStack(ModBlocks.flag), new AspectList().add(Aspect.AIR, 5));
+	}
 
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event){

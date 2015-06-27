@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/main/resources"/>
+	<classpathentry kind="src" path="api"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/Jason Archer/.gradle/caches/modules-2/files-2.1/codechicken/CodeChickenLib/1.7.10-1.1.3.138/2dd3b058db77eac637b638aa076e0968b203e75e/CodeChickenLib-1.7.10-1.1.3.138-dev.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/Jason Archer/.gradle/caches/modules-2/files-2.1/codechicken/CodeChickenCore/1.7.10-1.0.7.46/cde14277966ae6f43454201a718e282da21deb5/CodeChickenCore-1.7.10-1.0.7.46-dev.jar"/>
