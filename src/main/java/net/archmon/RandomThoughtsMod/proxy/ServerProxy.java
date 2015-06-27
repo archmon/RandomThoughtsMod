@@ -27,11 +27,4 @@ public class ServerProxy extends CommonProxy{
 		return null;
 	}
 
-	/*@Override
-	public void registerKeyBindings()
-	{
-	    //ClientRegistry.registerKeyBinding(Keybindings.charge);
-	    //ClientRegistry.registerKeyBinding(Keybindings.release);
-	}*/
-	//removed as of minemaartin video 2
 }
