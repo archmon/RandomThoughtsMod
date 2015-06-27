@@ -1,28 +1,20 @@
 package net.archmon.RandomThoughtsMod.event;
 
-import java.util.List;
-
-import net.archmon.RandomThoughtsMod.init.ModBlocks;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.item.EntityItem;
-import net.minecraft.entity.passive.EntityPig;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.AxisAlignedBB;
-import net.minecraftforge.event.entity.living.LivingDropsEvent;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.common.gameevent.TickEvent;
-import cpw.mods.fml.common.gameevent.TickEvent.PlayerTickEvent;
-import cpw.mods.fml.relauncher.Side;
 
 public class RandomThoughtsModEventHandler{
 
-	/**
+}
+
+/* Example code on how to code events
+ * Removed 6/27/15 10:47am
+ * @mod start prep
+ 
+   /**
 	 * Using the LivingDropsEvent. Note that this is from  net.minecraftforge.event, 
 	 * so to make this method be called, this class needs to be registered at 
 	 * MinecraftForge.EVENT_BUS.register(new RandomThoughtsModEventHandler()).
 	 * @param event
-	 */
+	 /
 	@SubscribeEvent
 	public void addPigDrops(LivingDropsEvent event){
 		if(event.entityLiving instanceof EntityPig && event.entityLiving.getRNG().nextInt(3) == 0) {
@@ -36,7 +28,7 @@ public class RandomThoughtsModEventHandler{
 	 * so to make this method be called, this class needs to be registered at 
 	 * FMLCommonHandler.instance().bus().register(new RandomThoughtsModEventHandler()).
 	 * @param event
-	 */
+	 /
 	@SubscribeEvent
 	public void onPlayerTick(PlayerTickEvent event){
 		if(event.side == Side.SERVER && event.phase == TickEvent.Phase.END) {
@@ -52,4 +44,4 @@ public class RandomThoughtsModEventHandler{
 			}
 		}
 	}
-}
+ */
