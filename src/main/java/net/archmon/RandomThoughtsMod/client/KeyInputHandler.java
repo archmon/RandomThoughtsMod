@@ -5,7 +5,7 @@ import net.archmon.RandomThoughtsMod.network.NetworkHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.InputEvent;
 
-public class KeyInputHandler{
+public class KeyInputHandler{//unused atm, go to ClientProxy to enable
 	private Keybindings getPressedKey(){
 		for(Keybindings key : Keybindings.values()) {
 			if(key.isPressed()) return key;

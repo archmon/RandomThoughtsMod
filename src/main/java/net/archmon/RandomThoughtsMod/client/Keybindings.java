@@ -4,7 +4,7 @@ import net.minecraft.client.settings.KeyBinding;
 
 import org.lwjgl.input.Keyboard;
 
-public enum Keybindings{
+public enum Keybindings{//unused atm, go to ClientProxy to enable.
 
 	EXPLODE("key.RandomThoughtsMod.explode", Keyboard.KEY_G), EXPLODE_BIG("key.RandomThoughtsMod.explodeBig",
 			Keyboard.KEY_H);

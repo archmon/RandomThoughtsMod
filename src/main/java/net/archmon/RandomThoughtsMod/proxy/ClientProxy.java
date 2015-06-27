@@ -1,25 +1,21 @@
 package net.archmon.RandomThoughtsMod.proxy;
 
-import net.archmon.RandomThoughtsMod.client.KeyInputHandler;
-import net.archmon.RandomThoughtsMod.client.Keybindings;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
-import cpw.mods.fml.client.registry.ClientRegistry;
-import cpw.mods.fml.common.FMLCommonHandler;
 
 public class ClientProxy extends CommonProxy{
 
 	@Override
 	public void preInit(){
-		registerKeybinds();
+		//registerKeybinds();
 	}
 
-	private void registerKeybinds(){
+	/*private void registerKeybinds(){//removed from preInit above 6/27/15 11:06am
 		FMLCommonHandler.instance().bus().register(new KeyInputHandler());
 		for(Keybindings key : Keybindings.values()) {
 			ClientRegistry.registerKeyBinding(key.getKeybind());
 		}
-	}
+	}*/
 
 	@Override
 	public void init(){
