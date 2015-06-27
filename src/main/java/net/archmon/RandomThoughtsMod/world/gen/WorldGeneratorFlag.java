@@ -2,19 +2,11 @@ package net.archmon.RandomThoughtsMod.world.gen;
 
 import java.util.Random;
 
-import net.archmon.RandomThoughtsMod.init.ModBlocks;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockLiquid;
-import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraft.world.gen.feature.WorldGenMinable;
-import net.minecraftforge.fluids.FluidRegistry;
 import cpw.mods.fml.common.IWorldGenerator;
 
 public class WorldGeneratorFlag implements IWorldGenerator{
-	private final WorldGenMinable flagGen = new WorldGenMinable(ModBlocks.flag, 32);//oreGen 
 
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider){
@@ -44,6 +36,16 @@ public class WorldGeneratorFlag implements IWorldGenerator{
 	}
 
 	private void generateSurface(World world, int x, int z, Random random){
+
+	}
+
+}
+
+/* Example code for world structures gen
+ * Removed 6/27/15 10:208am 
+ * @Mod start prep
+ * 
+ * private void generateSurface(World world, int x, int z, Random random){
 		if(random.nextInt(10) == 0) {
 			int randX = x + random.nextInt(16);
 			int randZ = z + random.nextInt(16);
@@ -58,12 +60,6 @@ public class WorldGeneratorFlag implements IWorldGenerator{
 			}
 		}
 
-		for(int i = 0; i < 5; i++) {
-			int randX = x + random.nextInt(16);
-			int randY = 20 + random.nextInt(40);
-			int randZ = z + random.nextInt(16);
-			flagGen.generate(world, random, randX, randY, randZ);
-		}
 	}
 
 	private void generateFlag(World world, int x, int y, int z){
@@ -76,9 +72,29 @@ public class WorldGeneratorFlag implements IWorldGenerator{
 			}
 		}
 	}
+ */
 
-}
-/*Old code 6/6/15 2:07pm
+//------------------------------------------------------------------
+
+/* Example code for world ore gen
+ * Removed 6/27/15 10:18am 
+ * @Mod start prep
+ * 
+ * private final WorldGenMinable flagGen = new WorldGenMinable(ModBlocks.flag, 32);//oreGen
+   private void generateSurface(World world, int x, int z, Random random){
+
+		for(int i = 0; i < 5; i++) {
+			int randX = x + random.nextInt(16);
+			int randY = 20 + random.nextInt(40);
+			int randZ = z + random.nextInt(16);
+			flagGen.generate(world, random, randX, randY, randZ);
+		}
+	}
+ */
+
+//----------------------------------------------
+
+/*Old code 6/6/15 2:07pm     [outdated]
   @Override
 	public void generate(Random random, int chunkX, int chunkZ, World world,
 			IChunkProvider chunkGenerator, IChunkProvider chunkProvider) 
