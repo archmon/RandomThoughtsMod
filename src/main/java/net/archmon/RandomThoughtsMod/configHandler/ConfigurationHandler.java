@@ -31,7 +31,16 @@ public class ConfigurationHandler{
 	//private static will be only callable within this class.
 	private static void loadConfigurations(){
 		testValue = configuration.getBoolean("configValue", Configuration.CATEGORY_GENERAL, false, "This is an example configuration value");
-		//        //CATEGORY_GENERAL=
+
+		if(configuration.hasChanged()) {
+			configuration.save();
+		}
+		//System.out.println("Configuration Test: " + testValue);  //test line for showing configValue in log.
+	}
+}
+
+/*
+  		//        //CATEGORY_GENERAL=
 		//        // #############
 		//        // #general
 		//        // #############
@@ -41,9 +50,4 @@ public class ConfigurationHandler{
 		//        //Stuff in "" = detail statement
 		//        //configuration.get expects a value at end of () with .getBoolean(true)
 		//        //Configuration.CATEGORY_GENERAL can be swapped with any string like "ForgeCraft"
-		if(configuration.hasChanged()) {
-			configuration.save();
-		}
-		//System.out.println("Configuration Test: " + testValue);  //test line for showing configValue in log.
-	}
-}
+ */
