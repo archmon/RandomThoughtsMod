@@ -1,12 +1,9 @@
 # Keys
-key.categories.RandomThoughtsMod=Random Thoughts Mod
-key.RandomThoughtsMod.explode=Explode
 
 # Creative Tabs
 itemGroup.randomthoughtsmod=Random Thoughts Mod
 
 # Items
-item.randomthoughtsmod:mapleLeaf.name=Maple Leaf of Awesomeness
 item.randomthoughtsmod:Debug.name=Debug
 
 # Blocks
@@ -24,5 +21,10 @@ randomthoughtsmod.waila.camoMine.notprimed=Not Primed
 randomthoughtsmod.waila.camoMine.primed=Primed
 randomthoughtsmod.waila.camoMine.primingIn=Priming In:
 
+#removed keys
+#key.categories.RandomThoughtsMod=Random Thoughts Mod
+#key.RandomThoughtsMod.explode=Explode
+#removed items
+#item.randomthoughtsmod:mapleLeaf.name=Maple Leaf of Awesomeness
 #removed blocks
 #tile.randomthoughtsmod:flag.name=Canadian Flag of Awesomeness

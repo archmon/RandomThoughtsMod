@@ -1,4 +1,7 @@
-package net.archmon.RandomThoughtsMod.item;
+/*removed 6/29/15 3:15pm
+ * preparing for mod start
+ * 
+ * package net.archmon.RandomThoughtsMod.item;
 
 //import net.archmon.RandomThoughtsMod.creativetab.CreativeTab_RTM;
 
@@ -15,4 +18,5 @@ public class ItemMapleLeaf extends Item_RTM{
 
 	}
 
-}
+}*/
+
