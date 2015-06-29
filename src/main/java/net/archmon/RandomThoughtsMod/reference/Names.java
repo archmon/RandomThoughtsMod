@@ -1,10 +1,9 @@
 package net.archmon.RandomThoughtsMod.reference;
 
-
 public class Names{
 	public static class Blocks{
 		public static final String CAMO_MINE = "camoMine";
-		public static final String FLAG = "flag";
+
 	}
 
 	public static class TileEntities{
@@ -12,3 +11,9 @@ public class Names{
 
 	}
 }
+
+/*removed 6/29/15 2:57pm
+ * preparing for mod start
+ * removed from public static class blocks
+ * public static final String FLAG = "flag";
+ */

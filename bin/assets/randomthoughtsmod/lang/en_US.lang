@@ -10,7 +10,6 @@ item.randomthoughtsmod:mapleLeaf.name=Maple Leaf of Awesomeness
 item.randomthoughtsmod:Debug.name=Debug
 
 # Blocks
-tile.randomthoughtsmod:flag.name=Canadian Flag of Awesomeness
 tile.camoMine.name=Camo Mine
 
 #GUI
@@ -24,3 +23,6 @@ randomthoughtsmod.waila.camoMine.target=Target:
 randomthoughtsmod.waila.camoMine.notprimed=Not Primed
 randomthoughtsmod.waila.camoMine.primed=Primed
 randomthoughtsmod.waila.camoMine.primingIn=Priming In:
+
+#removed blocks
+#tile.randomthoughtsmod:flag.name=Canadian Flag of Awesomeness

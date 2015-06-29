@@ -1,9 +1,7 @@
-package net.archmon.RandomThoughtsMod.block;
-
-import java.util.Random;
-
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.world.World;
+/*removed 6/29/15 2:49pm
+ * preparign for ModStart
+ * 
+ * package net.archmon.RandomThoughtsMod.block;
 
 public class BlockFlag extends Block_RTM{
 	public BlockFlag(){
@@ -13,7 +11,12 @@ public class BlockFlag extends Block_RTM{
 		setTickRandomly(true);
 	}
 
-	@Override
+}*/
+
+/*removed 6/29/15 2:46pm
+ * Preparing for ModStart
+ * 
+ @Override
 	public void updateTick(World world, int x, int y, int z, Random random){
 		//world.scheduleBlockUpdate(p_147464_1_, p_147464_2_, p_147464_3_, p_147464_4_, p_147464_5_);//sound like repeater appearlntly
 		world.playSoundEffect(x, y, z, "mob.enderdragon.wings", 2.0F, random.nextFloat() + 0.5F);
@@ -26,14 +29,15 @@ public class BlockFlag extends Block_RTM{
 		if(!world.isRemote) {
 			world.createExplosion(player, x, y, z, 3, true);
 			//above if makes createExplosion only on the server side
+			
 			/*FMLCommonHandler.instance().getEffectiveSide() == Side.SERVER
 			 * above statement can be used if no access to world is avaliable
-			 */
+			 * /
 		}
 		return true;
-
 	}
-}
+ */
+
 /*old code 6/6/15 2:40pm (Watching minemaarten video "part4 sounds" at the time
  * code for making blocks appear when clicked
  *

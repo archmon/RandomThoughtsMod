@@ -1,8 +1,6 @@
 package net.archmon.RandomThoughtsMod.init;
 
 import net.archmon.RandomThoughtsMod.block.BlockCamoMine;
-import net.archmon.RandomThoughtsMod.block.BlockFlag;
-import net.archmon.RandomThoughtsMod.block.Block_RTM;
 import net.archmon.RandomThoughtsMod.reference.Names;
 import net.archmon.RandomThoughtsMod.reference.Reference;
 import net.minecraft.block.Block;
@@ -13,13 +11,20 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class ModBlocks{
 
 	//creating instance of block
-	public static final Block_RTM flag = new BlockFlag();
+
 	public static final Block camoMine = new BlockCamoMine();
 
 	//register item
 	public static void init(){
-		GameRegistry.registerBlock(flag, Names.Blocks.FLAG);
 		GameRegistry.registerBlock(camoMine, Names.Blocks.CAMO_MINE);
 
 	}
 }
+
+/**Removed block 6/29/15 2:50pm
+ * //removed from instances of block
+ * public static final Block_RTM flag = new BlockFlag();
+ * 
+ *  //removed from init()
+ *  GameRegistry.registerBlock(flag, Names.Blocks.FLAG);
+ */

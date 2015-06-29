@@ -14,9 +14,6 @@ import net.archmon.RandomThoughtsMod.utility.LogHelper;
 import net.archmon.RandomThoughtsMod.world.gen.WorldGeneratorFlag;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
-import thaumcraft.api.ThaumcraftApi;
-import thaumcraft.api.aspects.Aspect;
-import thaumcraft.api.aspects.AspectList;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
@@ -72,7 +69,7 @@ public class RandomThoughtsMod{
 
 	@Optional.Method(modid = "Thaumcraft")
 	private void loadThaumcraft(){
-		ThaumcraftApi.registerObjectTag(new ItemStack(ModBlocks.flag), new AspectList().add(Aspect.AIR, 5));
+		//ThaumcraftApi.registerObjectTag(new ItemStack(ModBlocks.flag), new AspectList().add(Aspect.AIR, 5));
 	}
 
 	@Mod.EventHandler

@@ -21,7 +21,7 @@ public class BlockCamoMine extends Block_RandomThoughtsMod_TitleEntity{
 
 	public BlockCamoMine(){
 		setBlockName(Names.Blocks.CAMO_MINE);
-		setBlockTextureName(Reference.MOD_ID_LOWER + ":" + Names.Blocks.FLAG);
+		setBlockTextureName(Reference.MOD_ID_LOWER + ":" + Names.Blocks.CAMO_MINE);
 	}
 
 	@Override
