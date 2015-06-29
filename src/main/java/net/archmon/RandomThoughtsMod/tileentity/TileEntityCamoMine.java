@@ -6,7 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.archmon.RandomThoughtsMod.init.ModBlocks;
+import net.archmon.RandomThoughtsMod.utility.LogHelper;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemBlock;
@@ -26,9 +28,11 @@ public class TileEntityCamoMine extends TileEntity_RandomThoughtsMod implements 
 	public void updateEntity(){
 		if(timer > 0) timer--;
 		if(timer == 0 && !worldObj.isRemote) {
-			List<Entity> entities = worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(xCoord - 1, yCoord - 1, zCoord - 1, xCoord + 2, yCoord + 2, zCoord + 2));
+			List<Entity> entities = worldObj.getEntitiesWithinAABB(EntityLiving.class, AxisAlignedBB.getBoundingBox(xCoord - 1, yCoord - 1, zCoord - 1, xCoord + 2, yCoord + 2, zCoord + 2));
 			for(Entity entity : entities) {
 				if(target.equals("") || entity.getCommandSenderName().equalsIgnoreCase(target)) {
+					LogHelper.info(entity);
+
 					worldObj.createExplosion(null, xCoord + 0.5, yCoord + 0.5, zCoord + 0.5, 3.0F, true);
 					break;
 				}
