@@ -3,6 +3,10 @@ package net.archmon.RandomThoughtsMod.proxy;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 
+/**
+ * code in large thanks to Pahimar, updated by MineMaarten
+ */
+
 public class ClientProxy extends CommonProxy{
 
 	@Override

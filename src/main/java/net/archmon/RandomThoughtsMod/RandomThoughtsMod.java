@@ -28,6 +28,9 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
+/**
+ * Code is largely thanks to MineMaarten and Pahimar
+ */
 //F3 eclipse=open declaration
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 public class RandomThoughtsMod{

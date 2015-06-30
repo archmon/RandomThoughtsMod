@@ -6,6 +6,9 @@ import net.archmon.RandomThoughtsMod.reference.Reference;
 import net.minecraft.block.Block;
 import cpw.mods.fml.common.registry.GameRegistry;
 
+/**
+ * code in large thanks to MineMaarten and Pahimar
+ */
 @GameRegistry.ObjectHolder(Reference.MOD_ID)
 //Makes it so my items stay my items
 public class ModBlocks{

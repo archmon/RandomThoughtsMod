@@ -5,6 +5,9 @@ import net.archmon.RandomThoughtsMod.item.Item_RTM;
 import net.archmon.RandomThoughtsMod.reference.Reference;
 import cpw.mods.fml.common.registry.GameRegistry;
 
+/**
+ * code in large thanks to Pahimar
+ */
 //class for registering the mod items.
 @GameRegistry.ObjectHolder(Reference.MOD_ID)
 //Makes it so my items stay my items

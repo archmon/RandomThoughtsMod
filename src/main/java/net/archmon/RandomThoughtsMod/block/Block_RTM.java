@@ -8,6 +8,9 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
+/**
+ * Code in large thanks to Phaimar
+ */
 //Generic class like Item_RTM
 public class Block_RTM extends Block{
 	public Block_RTM(Material material){

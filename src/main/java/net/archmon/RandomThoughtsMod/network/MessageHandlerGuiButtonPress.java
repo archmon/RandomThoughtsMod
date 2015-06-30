@@ -5,6 +5,9 @@ import net.archmon.RandomThoughtsMod.tileentity.TileEntity_RandomThoughtsMod;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 
+/**
+ * code in large thanks to MineMaarten
+ */
 public class MessageHandlerGuiButtonPress extends MessageXYZ<MessageHandlerGuiButtonPress>{
 	private int id;
 

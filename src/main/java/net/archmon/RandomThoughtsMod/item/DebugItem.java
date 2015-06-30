@@ -1,5 +1,8 @@
 package net.archmon.RandomThoughtsMod.item;
 
+/**
+ * code by archmon
+ */
 public class DebugItem extends Item_RTM{
 	public DebugItem(){
 		super();

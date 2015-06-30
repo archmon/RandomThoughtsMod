@@ -4,6 +4,9 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 
+/**
+ * code in large thanks to MineMaarten
+ */
 public abstract class Container_RandomThoughtsMod extends Container{
 
 	protected void addPlayerSlots(InventoryPlayer playerInventory, int x, int y){

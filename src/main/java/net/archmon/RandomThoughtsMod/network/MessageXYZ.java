@@ -5,6 +5,9 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
 
+/**
+ * code in large thanks to MineMaarten
+ */
 public abstract class MessageXYZ<REQ extends IMessage> extends MessageBase<REQ>{
 
 	protected int x, y, z;

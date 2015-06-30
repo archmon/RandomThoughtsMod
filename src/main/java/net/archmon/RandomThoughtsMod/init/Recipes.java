@@ -1,5 +1,9 @@
 package net.archmon.RandomThoughtsMod.init;
 
+/**
+ * code in large thanks to Pahimar
+ * commented out by archmon cause of removing flag and mapleleaf
+ */
 
 public class Recipes{
 	public static void init(){

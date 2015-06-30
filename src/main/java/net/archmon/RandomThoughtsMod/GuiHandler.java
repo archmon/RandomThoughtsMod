@@ -7,6 +7,10 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.network.IGuiHandler;
 
+/**
+ * Code in the GUIHandler was from MineMaarten AdvancedMod series
+ * So Large thanks to him for it.
+ */
 public class GuiHandler implements IGuiHandler{
 
 	public enum GuiIDs{

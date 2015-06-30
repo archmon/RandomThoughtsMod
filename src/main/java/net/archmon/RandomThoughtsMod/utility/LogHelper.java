@@ -6,6 +6,9 @@ import org.apache.logging.log4j.Level;
 
 import cpw.mods.fml.common.FMLLog;
 
+/**
+ * code in large thanks to Pahimar
+ */
 public class LogHelper{
 	public static void log(Level logLevel, Object object){
 		FMLLog.log(Reference.MOD_NAME, logLevel, String.valueOf(object));

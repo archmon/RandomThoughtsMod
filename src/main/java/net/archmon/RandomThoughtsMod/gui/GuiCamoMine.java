@@ -12,6 +12,10 @@ import net.minecraft.entity.player.InventoryPlayer;
 
 import org.lwjgl.opengl.GL11;
 
+/**
+ * code in large thanks to MineMaarten
+ */
+
 public class GuiCamoMine extends Gui_RandomThoughtsMod{
 	private final TileEntityCamoMine te;
 	private GuiButton resetButton;

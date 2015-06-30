@@ -16,6 +16,9 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
+/**
+ * code in large thanks to MineMaarten
+ */
 public class WailaCamoHandler implements IWailaDataProvider{
 
 	@Override

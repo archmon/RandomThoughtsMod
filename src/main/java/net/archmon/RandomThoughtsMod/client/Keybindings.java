@@ -1,4 +1,4 @@
-package net.archmon.RandomThoughtsMod.client;
+/*package net.archmon.RandomThoughtsMod.client;
 
 import net.minecraft.client.settings.KeyBinding;
 
@@ -23,4 +23,4 @@ public enum Keybindings{//unused atm, go to ClientProxy to enable.
 		return keybinding.isPressed();
 	}
 
-}
+}*/

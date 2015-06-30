@@ -5,6 +5,9 @@ import net.archmon.RandomThoughtsMod.reference.Reference;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
+/**
+ * Code in large thanks to Pahimar
+ */
 public class CreativeTab_RTM{
 	public static final CreativeTabs RTM_TAB = new CreativeTabs(Reference.MOD_ID.toLowerCase()){
 		@Override

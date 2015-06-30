@@ -8,7 +8,6 @@ import java.util.List;
 import net.archmon.RandomThoughtsMod.init.ModBlocks;
 import net.archmon.RandomThoughtsMod.utility.LogHelper;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemBlock;
@@ -18,6 +17,9 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.AxisAlignedBB;
 import cpw.mods.fml.common.network.ByteBufUtils;
 
+/**
+ * code in large thanks to MineMaarten
+ */
 public class TileEntityCamoMine extends TileEntity_RandomThoughtsMod implements ISidedInventory{
 	private int timer = 60;//20 ticks in 1 sec 
 	private String target = "";
@@ -28,7 +30,7 @@ public class TileEntityCamoMine extends TileEntity_RandomThoughtsMod implements 
 	public void updateEntity(){
 		if(timer > 0) timer--;
 		if(timer == 0 && !worldObj.isRemote) {
-			List<Entity> entities = worldObj.getEntitiesWithinAABB(EntityLiving.class, AxisAlignedBB.getBoundingBox(xCoord - 1, yCoord - 1, zCoord - 1, xCoord + 2, yCoord + 2, zCoord + 2));
+			List<Entity> entities = worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(xCoord - 1, yCoord - 1, zCoord - 1, xCoord + 2, yCoord + 2, zCoord + 2));
 			for(Entity entity : entities) {
 				if(target.equals("") || entity.getCommandSenderName().equalsIgnoreCase(target)) {
 					LogHelper.info(entity);

@@ -1,5 +1,8 @@
 package net.archmon.RandomThoughtsMod.reference;
 
+/**
+ * code in large thanks to MineMaarten
+ */
 public class Names{
 	public static class Blocks{
 		public static final String CAMO_MINE = "camoMine";

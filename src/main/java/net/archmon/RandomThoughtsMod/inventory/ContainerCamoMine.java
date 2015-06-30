@@ -14,6 +14,9 @@ import net.minecraft.item.ItemStack;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
+/**
+ * code in large thanks to MineMaarten
+ */
 public class ContainerCamoMine extends Container_RandomThoughtsMod{
 	private final TileEntityCamoMine te;
 	private int lastTimer = -1;

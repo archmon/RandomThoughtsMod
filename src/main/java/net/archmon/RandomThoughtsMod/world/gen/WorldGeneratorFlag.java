@@ -6,6 +6,9 @@ import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import cpw.mods.fml.common.IWorldGenerator;
 
+/**
+ * code in large thanks to MineMaarten
+ */
 public class WorldGeneratorFlag implements IWorldGenerator{
 
 	@Override

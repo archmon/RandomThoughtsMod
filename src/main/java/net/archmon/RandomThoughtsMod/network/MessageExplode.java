@@ -3,6 +3,9 @@ package net.archmon.RandomThoughtsMod.network;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.entity.player.EntityPlayer;
 
+/**
+ * code in large thanks to MineMaarten
+ */
 public class MessageExplode extends MessageBase<MessageExplode>{
 
 	private float explosionSize;

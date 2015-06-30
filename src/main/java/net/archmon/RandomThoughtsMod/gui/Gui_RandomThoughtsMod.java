@@ -7,6 +7,9 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.util.ResourceLocation;
 
+/**
+ * code in large thanks to MineMaarten
+ */
 public abstract class Gui_RandomThoughtsMod extends GuiContainer{
 	private final ResourceLocation guiTexture;
 	private final IInventory inventory;

@@ -11,6 +11,9 @@ import net.minecraft.tileentity.TileEntity;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.internal.FMLProxyPacket;
 
+/**
+ * code in large thanks to MineMaarten
+ */
 @Sharable
 public class DescriptionHandler extends SimpleChannelInboundHandler<FMLProxyPacket>{
 	public static final String CHANNEL = Reference.MOD_ID + "Description";

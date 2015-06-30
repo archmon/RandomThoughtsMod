@@ -4,6 +4,9 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
+/**
+ * code in large thanks to MineMaarten
+ */
 public class SlotCamouflage extends Slot{
 
 	public SlotCamouflage(IInventory inventory, int inventroyIndex, int x, int y){

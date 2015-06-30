@@ -8,6 +8,9 @@ import net.minecraft.item.ItemStack;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
+/**
+ * code in large thanks to Pahimar
+ */
 //generic class for all my items
 public class Item_RTM extends Item{
 	public Item_RTM(){

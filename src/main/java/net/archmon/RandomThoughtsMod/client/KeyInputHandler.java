@@ -1,4 +1,4 @@
-package net.archmon.RandomThoughtsMod.client;
+/*package net.archmon.RandomThoughtsMod.client;
 
 import net.archmon.RandomThoughtsMod.network.MessageExplode;
 import net.archmon.RandomThoughtsMod.network.NetworkHandler;
@@ -28,7 +28,7 @@ public class KeyInputHandler{//unused atm, go to ClientProxy to enable
 			}
 		}
 	}
-}
+}*/
 /* Rubish client side only code 6/7/15 7:39am
  EntityPlayer player = Minecraft.getMinecraft().thePlayer;
 player.worldObj.createExplosion(player, player.posX, player.posY-10, player.posZ, 3.0F, true);

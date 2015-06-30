@@ -1,6 +1,9 @@
 package net.archmon.RandomThoughtsMod.event;
 
-
+/**
+ * class started by MineMaarten
+ * commented out by archmon
+ */
 public class RandomThoughtsModEventHandler{
 
 }

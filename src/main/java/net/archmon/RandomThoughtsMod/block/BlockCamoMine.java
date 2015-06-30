@@ -17,6 +17,10 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
+/**
+ * Code in large thanks to MineMaarten
+ * Block texture was updated by archmon
+ */
 public class BlockCamoMine extends Block_RandomThoughtsMod_TitleEntity{
 
 	public BlockCamoMine(){

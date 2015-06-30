@@ -7,6 +7,9 @@ import net.minecraft.network.Packet;
 import net.minecraft.tileentity.TileEntity;
 import cpw.mods.fml.common.network.internal.FMLProxyPacket;
 
+/**
+ * code in large thanks to MineMaarten
+ */
 public class TileEntity_RandomThoughtsMod extends TileEntity{
 
 	@Override

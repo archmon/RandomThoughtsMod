@@ -1,5 +1,8 @@
 package net.archmon.RandomThoughtsMod.reference;
 
+/**
+ * code in large thanks to Pahimar
+ */
 public class Reference{
 	public static final String MOD_ID = "RandomThoughtsMod";
 	public static final String MOD_NAME = "Random Thoughts Mod";

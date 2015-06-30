@@ -9,6 +9,9 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import cpw.mods.fml.common.network.ByteBufUtils;
 
+/**
+ * code in large thanks to MineMaarten
+ */
 public class MessageHandleTextUpdate extends MessageXYZ<MessageHandleTextUpdate>{
 	private int id;
 	private String text;
