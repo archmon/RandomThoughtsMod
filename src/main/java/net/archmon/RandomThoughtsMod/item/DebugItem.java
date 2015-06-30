@@ -12,6 +12,5 @@ public class DebugItem extends Item_RTM{
 		//don't forget to go to en_US.lang and ModItems.java
 		maxStackSize = 1;
 		//makes it to where each item is a full stack.
-
 	}
 }

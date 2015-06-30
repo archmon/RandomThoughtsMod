@@ -2,6 +2,7 @@ package net.archmon.RandomThoughtsMod.init;
 
 import net.archmon.RandomThoughtsMod.item.DebugItem;
 import net.archmon.RandomThoughtsMod.item.Item_RTM;
+import net.archmon.RandomThoughtsMod.item.TorchSlingshot;
 import net.archmon.RandomThoughtsMod.reference.Reference;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -14,12 +15,14 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class ModItems{
 
 	public static final Item_RTM Debug = new DebugItem();
+	public static final Item_RTM TorchSlingshot = new TorchSlingshot();
 
 	public static void init(){
 
 		//In game give command
 		//give ForgeDevName RandomThoughtsMod:mapleLeaf
 		GameRegistry.registerItem(Debug, "Debug");
+		GameRegistry.registerItem(TorchSlingshot, "TorchSlingshot");
 	}
 }
 

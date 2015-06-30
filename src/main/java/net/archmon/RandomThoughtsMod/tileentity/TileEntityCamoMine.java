@@ -30,12 +30,13 @@ public class TileEntityCamoMine extends TileEntity_RandomThoughtsMod implements 
 	public void updateEntity(){
 		if(timer > 0) timer--;
 		if(timer == 0 && !worldObj.isRemote) {
-			List<Entity> entities = worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(xCoord - 1, yCoord - 1, zCoord - 1, xCoord + 2, yCoord + 2, zCoord + 2));
+			List<Entity> entities = worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(xCoord - 2, yCoord - 2, zCoord - 2, xCoord + 3, yCoord + 3, zCoord + 3));
 			for(Entity entity : entities) {
 				if(target.equals("") || entity.getCommandSenderName().equalsIgnoreCase(target)) {
 					LogHelper.info(entity);
 
-					worldObj.createExplosion(null, xCoord + 0.5, yCoord + 0.5, zCoord + 0.5, 3.0F, true);
+					worldObj.createExplosion(null, xCoord + 0.5, yCoord + 0.5, zCoord + 0.5, 0.5F, true);
+
 					break;
 				}
 			}
