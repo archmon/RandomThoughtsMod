@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.archmon.RandomThoughtsMod.init.ModBlocks;
-import net.archmon.RandomThoughtsMod.utility.LogHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.ISidedInventory;
@@ -33,8 +32,8 @@ public class TileEntityCamoMine extends TileEntity_RandomThoughtsMod implements 
 			List<Entity> entities = worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(xCoord - 2, yCoord - 2, zCoord - 2, xCoord + 3, yCoord + 3, zCoord + 3));
 			for(Entity entity : entities) {
 				if(target.equals("") || entity.getCommandSenderName().equalsIgnoreCase(target)) {
-					LogHelper.info(entity);
 
+					worldObj.setBlockToAir(xCoord, yCoord, zCoord);
 					worldObj.createExplosion(null, xCoord + 0.5, yCoord + 0.5, zCoord + 0.5, 0.5F, true);
 
 					break;
