@@ -13,7 +13,7 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 public class ConfigurationHandler{
 	public static Configuration configuration;
 	//var declare for configuration file
-	public static boolean testValue = false;
+	public static float BlastFloatSize = 3.0f;
 
 	public static void init(File configFile){
 		//Create the configuration object from the given configuration file
@@ -33,7 +33,7 @@ public class ConfigurationHandler{
 
 	//private static will be only callable within this class.
 	private static void loadConfigurations(){
-		testValue = configuration.getBoolean("configValue", Configuration.CATEGORY_GENERAL, false, "This is an example configuration value");
+		BlastFloatSize = configuration.getFloat("BlastFloatSize", Configuration.CATEGORY_GENERAL, 3.0f, 0.5f, 20.0f, "This is the size of the blast strength. 3.0=creeper.");
 
 		if(configuration.hasChanged()) {
 			configuration.save();

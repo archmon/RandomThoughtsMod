@@ -5,6 +5,7 @@ import io.netty.buffer.ByteBuf;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.archmon.RandomThoughtsMod.configHandler.ConfigurationHandler;
 import net.archmon.RandomThoughtsMod.init.ModBlocks;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -34,7 +35,7 @@ public class TileEntityCamoMine extends TileEntity_RandomThoughtsMod implements 
 				if(target.equals("") || entity.getCommandSenderName().equalsIgnoreCase(target)) {
 
 					worldObj.setBlockToAir(xCoord, yCoord, zCoord);
-					worldObj.createExplosion(null, xCoord + 0.5, yCoord + 0.5, zCoord + 0.5, 0.5F, true);
+					worldObj.createExplosion(null, xCoord + 0.5, yCoord + 0.5, zCoord + 0.5, ConfigurationHandler.BlastFloatSize, true);
 
 					break;
 				}

@@ -1,5 +1,6 @@
 package net.archmon.RandomThoughtsMod;
 
+import net.archmon.RandomThoughtsMod.configHandler.ConfigurationHandler;
 import net.archmon.RandomThoughtsMod.event.RandomThoughtsModEventHandler;
 import net.archmon.RandomThoughtsMod.init.ModBlocks;
 import net.archmon.RandomThoughtsMod.init.ModItems;
@@ -55,7 +56,7 @@ public class RandomThoughtsMod{
 		FMLCommonHandler.instance().bus().register(new RandomThoughtsModEventHandler());//minecraft event
 		//FMLInterModComms.sendMessage(Reference.MOD_ID, "camoMineBlacklist", new ItemStack(Blocks.hopper));
 		FMLInterModComms.sendMessage("Waila", "register", "net.archmon.RandomThoughtsMod.thirdparty.waila.Waila.onWailaCall");
-		//ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+		ConfigurationHandler.init(event.getSuggestedConfigurationFile());
 
 		//puts time, client thread/info, modID, message.
 		//Also, info can be replaced with the different levels from log helper class
