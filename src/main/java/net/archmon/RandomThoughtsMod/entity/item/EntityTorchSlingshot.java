@@ -16,8 +16,6 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.living.EnderTeleportEvent;
 
 public class EntityTorchSlingshot extends EntityThrowable{
 
@@ -44,29 +42,24 @@ public class EntityTorchSlingshot extends EntityThrowable{
 				EntityPlayerMP player = (EntityPlayerMP)getThrower();
 
 				if(player.playerNetServerHandler.func_147362_b().isChannelOpen() && player.worldObj == worldObj) {
-					EnderTeleportEvent event = new EnderTeleportEvent(player, posX, posY, posZ, 5.0F);
-					if(!MinecraftForge.EVENT_BUS.post(event)) {
-						int x = (int)Math.round(event.targetX);
-						int y = (int)Math.round(event.targetY);
-						int z = (int)Math.round(event.targetZ);
+					if(true) {
+						int x = (int)Math.round(posX);
+						int y = (int)Math.round(posY);
+						int z = (int)Math.round(posZ);
 
 						/*
 						 * Thanks MineMaarten for idea how to get show chat messages
 						 */
-						//player.addChatComponentMessage(new ChatComponentTranslation(EnumChatFormatting.RED + "x=" + posX + " y= " + posY + " z= " + posZ));
+
 						player.addChatComponentMessage(new ChatComponentTranslation(EnumChatFormatting.GREEN + "x=" + x + " y= " + y + " z= " + z));
 						if(worldObj.isAirBlock(x, y, z)) {
-							if(canPlaceBlockAt(worldObj, x, y, z)) {
-								worldObj.setBlock(x, y, z, Blocks.torch, 0, 2);
-							} else {
-								worldObj.setBlock(x, y, z, Blocks.glowstone, 0, 2);
-							}
+							worldObj.setBlock(x, y, z, Blocks.torch, 0, 2);
 							//worldObj.setBlock(x, y, z, Blocks.glowstone, 0, 2);
 							player.addChatComponentMessage(new ChatComponentTranslation(EnumChatFormatting.BLUE + "Normal"));
 						} else {
 							ItemStack torch = new ItemStack(Blocks.torch);
-							//dropBlockAsItem(worldObj, x, y, z, torch);
-							worldObj.setBlock(x, y, z, Blocks.glowstone, 0, 2);
+							dropBlockAsItem(worldObj, x, y, z, torch);
+							//worldObj.setBlock(x, y, z, Blocks.glowstone, 0, 2);
 							player.addChatComponentMessage(new ChatComponentTranslation(EnumChatFormatting.BLUE + "failed"));
 						}
 					}
